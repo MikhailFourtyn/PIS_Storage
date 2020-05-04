@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PIS_Storage
 {
-    public partial class Form1 : Form
+    public partial class GoodList : Form
     {
-        public Form1()
+        public GoodList()
         {
             InitializeComponent();
         }
