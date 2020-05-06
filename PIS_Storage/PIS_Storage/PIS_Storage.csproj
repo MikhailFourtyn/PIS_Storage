@@ -68,18 +68,67 @@
     <Compile Include="Authorization.Designer.cs">
       <DependentUpon>Authorization.cs</DependentUpon>
     </Compile>
+    <Compile Include="Good.cs" />
     <Compile Include="GoodList.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GoodList.Designer.cs">
       <DependentUpon>GoodList.cs</DependentUpon>
     </Compile>
+    <Compile Include="GoodType.cs" />
     <Compile Include="ManagerStartScreen.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ManagerStartScreen.Designer.cs">
       <DependentUpon>ManagerStartScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202005042045411_InitialCreate.cs" />
+    <Compile Include="Migrations\202005042045411_InitialCreate.designer.cs">
+      <DependentUpon>202005042045411_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005042110360_UpdateUserStatus.cs" />
+    <Compile Include="Migrations\202005042110360_UpdateUserStatus.designer.cs">
+      <DependentUpon>202005042110360_UpdateUserStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005042120454_UpdatedUserAttributes.cs" />
+    <Compile Include="Migrations\202005042120454_UpdatedUserAttributes.designer.cs">
+      <DependentUpon>202005042120454_UpdatedUserAttributes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005042128081_UpdateUserStringsToVarchar.cs" />
+    <Compile Include="Migrations\202005042128081_UpdateUserStringsToVarchar.designer.cs">
+      <DependentUpon>202005042128081_UpdateUserStringsToVarchar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005042235135_AddEntities.cs" />
+    <Compile Include="Migrations\202005042235135_AddEntities.designer.cs">
+      <DependentUpon>202005042235135_AddEntities.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005042244576_AddGood.cs" />
+    <Compile Include="Migrations\202005042244576_AddGood.designer.cs">
+      <DependentUpon>202005042244576_AddGood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005042251296_FixGoodPhotoPath.cs" />
+    <Compile Include="Migrations\202005042251296_FixGoodPhotoPath.designer.cs">
+      <DependentUpon>202005042251296_FixGoodPhotoPath.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005042252549_AddOrder.cs" />
+    <Compile Include="Migrations\202005042252549_AddOrder.designer.cs">
+      <DependentUpon>202005042252549_AddOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005042253413_AddStorage.cs" />
+    <Compile Include="Migrations\202005042253413_AddStorage.designer.cs">
+      <DependentUpon>202005042253413_AddStorage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005042254414_AddOrderStatuschanges.cs" />
+    <Compile Include="Migrations\202005042254414_AddOrderStatuschanges.designer.cs">
+      <DependentUpon>202005042254414_AddOrderStatuschanges.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005062228243_AddGoodType.cs" />
+    <Compile Include="Migrations\202005062228243_AddGoodType.designer.cs">
+      <DependentUpon>202005062228243_AddGoodType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Order.cs" />
+    <Compile Include="OrderStatusChanges.cs" />
     <Compile Include="PIS_DbContext.cs" />
     <Compile Include="Registration.cs">
       <SubType>Form</SubType>
@@ -95,12 +144,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Storage.cs" />
+    <Compile Include="User.cs" />
     <Compile Include="UserStartScreen.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UserStartScreen.Designer.cs">
       <DependentUpon>UserStartScreen.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AdminStartScreen.resx">
+      <DependentUpon>AdminStartScreen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Authorization.resx">
       <DependentUpon>Authorization.cs</DependentUpon>
     </EmbeddedResource>
@@ -109,6 +163,39 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ManagerStartScreen.resx">
       <DependentUpon>ManagerStartScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005042045411_InitialCreate.resx">
+      <DependentUpon>202005042045411_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005042110360_UpdateUserStatus.resx">
+      <DependentUpon>202005042110360_UpdateUserStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005042120454_UpdatedUserAttributes.resx">
+      <DependentUpon>202005042120454_UpdatedUserAttributes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005042128081_UpdateUserStringsToVarchar.resx">
+      <DependentUpon>202005042128081_UpdateUserStringsToVarchar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005042235135_AddEntities.resx">
+      <DependentUpon>202005042235135_AddEntities.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005042244576_AddGood.resx">
+      <DependentUpon>202005042244576_AddGood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005042251296_FixGoodPhotoPath.resx">
+      <DependentUpon>202005042251296_FixGoodPhotoPath.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005042252549_AddOrder.resx">
+      <DependentUpon>202005042252549_AddOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005042253413_AddStorage.resx">
+      <DependentUpon>202005042253413_AddStorage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005042254414_AddOrderStatuschanges.resx">
+      <DependentUpon>202005042254414_AddOrderStatuschanges.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005062228243_AddGoodType.resx">
+      <DependentUpon>202005062228243_AddGoodType.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -130,6 +217,7 @@
       <DependentUpon>UserStartScreen.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Good.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

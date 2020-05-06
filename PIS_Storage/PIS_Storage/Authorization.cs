@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -66,38 +67,99 @@ namespace PIS_Storage
         }
         private void buttonLogin_Click_1(object sender, EventArgs e)
         {
-            bool invalidLoginLen = false;
-            bool invalidPasswordLen = false;
-            bool loginNotExisting = false;
-            bool wrongPassword = false;
+            String userLogin = textBoxLogin.Text;
+            String userPassword = textBoxPassword.Text;
 
-            // Ввод логина и пароля в переменные
+            bool loginTextboxesValid = true;
 
-            string inputLogin;
-            string inputPassword;
-
-            // Проверка длин логина и пароля
-
-            if (!invalidLoginLen && !invalidPasswordLen)
+            if(userLogin.Length < 5)
             {
-                // Проверка совпадения логина с полем User.Name. 
-                // Совпадение => получаем id. Не было совпадения => выводим ошибку
-                // Проверка совпадения пароля с полем User.Password
-
-                // Все в порядке - отключаем поле ошибок
-
-                panelErrors.Enabled = false;
-
-                // Заполнение полей Login и Password текущего юзера
-
-                // 
+                labelLoginLen.Text = "Длина 5-20 символов!";
+                labelLoginLen.ForeColor = Color.Crimson;
+                loginTextboxesValid = false;
             }
             else
             {
-                
+                labelLoginLen.Text = "Длина 5-20 символов";
+                labelLoginLen.ForeColor = Color.Black;
             }
-            
 
+            if(userPassword.Length < 5)
+            {
+                labelPasswordLen.Text = "Длина 5-20 символов!";
+                labelPasswordLen.ForeColor = Color.Crimson;
+                loginTextboxesValid = false;
+            }
+            else 
+            {
+                labelPasswordLen.Text = "Длина 5-20 символов";
+                labelPasswordLen.ForeColor = Color.Black;
+            }
+
+            if(loginTextboxesValid)
+            {
+                using (var db = new PIS_DbContext())
+                {
+                    List<User> currUser = (from user in db.Users
+                                           where user.Login == userLogin
+                                           select user).ToList();
+                    if(currUser.Count == 0)
+                    {
+                        labelLoginLen.Text = "Пользователь с данным логином не существует!";
+                        labelLoginLen.ForeColor = Color.Crimson;
+                    }
+                    else
+                    {
+                        User currentUser = currUser.First<User>();
+
+                        if (currentUser.Password == userPassword)
+                        {
+                            // singleton.currentuser = currentuser;
+
+                            // Переход на начальный экран
+
+                            Hide();
+                            switch (currentUser.Status)
+                            {
+                                case 0:
+                                    {
+                                        UserStartScreen uStartScreen = new UserStartScreen();
+                                        uStartScreen.ShowDialog();
+                                        Close();
+                                        break;
+                                    }
+
+                                case 1:
+                                    {
+                                        ManagerStartScreen mStartScreen = new ManagerStartScreen();
+                                        mStartScreen.ShowDialog();
+                                        Close();
+                                        break;
+                                    }
+                                case 2:
+                                    {
+                                        AdminStartScreen aStartScreen = new AdminStartScreen();
+                                        aStartScreen.ShowDialog();
+                                        Close();
+                                        break;
+                                    }
+                                default:
+                                    {
+                                        UserStartScreen uStartScreen = new UserStartScreen();
+                                        uStartScreen.ShowDialog();
+                                        Close();
+                                        break;
+                                    }
+                            }
+                        }
+                        else
+                        {
+                            labelPasswordLen.Text = "Неверный пароль!";
+                            labelPasswordLen.ForeColor = Color.Crimson;
+                        }
+                    }
+                }
+            }
         }
 
     }

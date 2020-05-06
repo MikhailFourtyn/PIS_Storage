@@ -16,5 +16,13 @@ namespace PIS_Storage
         {
             InitializeComponent();
         }
+
+        private void buttonOpenGoodList_Click(object sender, EventArgs e)
+        {
+            Hide();
+            GoodList gList = new GoodList();
+            gList.ShowDialog();
+            Close();
+        }
     }
 }

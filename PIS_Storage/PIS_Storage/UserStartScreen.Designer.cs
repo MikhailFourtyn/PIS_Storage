@@ -40,14 +40,18 @@
             this.buttonOpenGoodList.TabIndex = 13;
             this.buttonOpenGoodList.Text = "Просмотреть товары в наличии";
             this.buttonOpenGoodList.UseVisualStyleBackColor = true;
+            this.buttonOpenGoodList.Click += new System.EventHandler(this.buttonOpenGoodList_Click);
             // 
             // UserStartScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.buttonOpenGoodList);
+            this.MaximizeBox = false;
             this.Name = "UserStartScreen";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UserStartScreen";
             this.ResumeLayout(false);
 

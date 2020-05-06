@@ -32,21 +32,21 @@
             this.buttonReturnBack = new System.Windows.Forms.Button();
             this.buttonRegister = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panelErrors = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
+            this.panelErrors.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.panelErrors.SuspendLayout();
             this.SuspendLayout();
             // 
             // label6
@@ -56,7 +56,7 @@
             this.label6.Font = new System.Drawing.Font("Calibri", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label6.Location = new System.Drawing.Point(0, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(800, 70);
+            this.label6.Size = new System.Drawing.Size(1264, 70);
             this.label6.TabIndex = 11;
             this.label6.Text = "Регистрация";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -102,63 +102,6 @@
             this.panel2.Size = new System.Drawing.Size(369, 355);
             this.panel2.TabIndex = 19;
             // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.textBox2.Location = new System.Drawing.Point(157, 108);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(205, 29);
-            this.textBox2.TabIndex = 9;
-            this.textBox2.UseSystemPasswordChar = true;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::PIS_Storage.Properties.Resources.user2;
-            this.pictureBox1.Location = new System.Drawing.Point(7, 6);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(64, 64);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Italic);
-            this.label1.Location = new System.Drawing.Point(77, 13);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 49);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Логин:";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::PIS_Storage.Properties.Resources.lock1closed;
-            this.pictureBox2.Location = new System.Drawing.Point(7, 91);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(64, 64);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 6;
-            this.pictureBox2.TabStop = false;
-            // 
-            // label2
-            // 
-            this.label2.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Italic);
-            this.label2.Location = new System.Drawing.Point(77, 99);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 49);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Пароль:";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.textBox1.Location = new System.Drawing.Point(157, 23);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(205, 29);
-            this.textBox1.TabIndex = 8;
-            // 
             // textBox3
             // 
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
@@ -178,6 +121,43 @@
             this.label3.Text = "Подтвердите пароль:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.textBox2.Location = new System.Drawing.Point(157, 108);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(205, 29);
+            this.textBox2.TabIndex = 9;
+            this.textBox2.UseSystemPasswordChar = true;
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Italic);
+            this.label1.Location = new System.Drawing.Point(77, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(74, 49);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Логин:";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Italic);
+            this.label2.Location = new System.Drawing.Point(77, 99);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(87, 49);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Пароль:";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.textBox1.Location = new System.Drawing.Point(157, 23);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(205, 29);
+            this.textBox1.TabIndex = 8;
+            // 
             // panelErrors
             // 
             this.panelErrors.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
@@ -188,6 +168,7 @@
             this.panelErrors.Name = "panelErrors";
             this.panelErrors.Size = new System.Drawing.Size(397, 265);
             this.panelErrors.TabIndex = 20;
+            this.panelErrors.Visible = false;
             // 
             // label5
             // 
@@ -210,22 +191,45 @@
             this.label4.Text = "Некорректный ввод!";
             this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::PIS_Storage.Properties.Resources.user2;
+            this.pictureBox1.Location = new System.Drawing.Point(7, 6);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(64, 64);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::PIS_Storage.Properties.Resources.lock1closed;
+            this.pictureBox2.Location = new System.Drawing.Point(7, 91);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(64, 64);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 6;
+            this.pictureBox2.TabStop = false;
+            // 
             // Registration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.panelErrors);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.buttonReturnBack);
             this.Controls.Add(this.label6);
+            this.MaximizeBox = false;
             this.Name = "Registration";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ПИС \"Склад\"";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panelErrors.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.panelErrors.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
