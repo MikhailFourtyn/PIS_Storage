@@ -34,49 +34,15 @@ namespace PIS_Storage
             Close();
         }
 
-        bool checkErrors(ref bool invalidLoginLen, ref bool invalidPasswordLen, ref bool loginNotExisting, ref bool wrongPassword)
+        bool checkTextboxes(ref string userLogin, ref string userPassword)
         {
-            bool res = false;
+            bool res = true;
 
-
-
-            return res;
-        }
-
-        private void showErrors(bool invalidLoginLen, bool invalidPasswordLen, bool loginNotExisting, bool wrongPassword)
-        {
-            string errorMsgLoginInvalid = "Логин должен быть длиной 5-30 символов!";
-            string errorMsgPasswordInvalid = "Пароль должен быть длиной 5-20 символов!";
-            string errorMsgLoginNotExisting = "Пользователь с данным логином не существует!";
-            string errorMsgWrongPassword = "Неверный пароль!";
-            string errorMsgFull = "";
-
-            panelErrors.Enabled = true;
-
-
-
-            if (invalidLoginLen && invalidPasswordLen)
-                errorMsgFull += errorMsgLoginInvalid + '\n' + errorMsgPasswordInvalid;
-            else
-            {
-                if (invalidLoginLen)
-                    errorMsgFull = errorMsgLoginInvalid;
-                if (invalidPasswordLen)
-                    errorMsgFull = errorMsgPasswordInvalid;
-            }
-        }
-        private void buttonLogin_Click_1(object sender, EventArgs e)
-        {
-            String userLogin = textBoxLogin.Text;
-            String userPassword = textBoxPassword.Text;
-
-            bool loginTextboxesValid = true;
-
-            if(userLogin.Length < 5)
+            if (userLogin.Length < 5)
             {
                 labelLoginLen.Text = "Длина 5-20 символов!";
                 labelLoginLen.ForeColor = Color.Crimson;
-                loginTextboxesValid = false;
+                res = false;
             }
             else
             {
@@ -84,43 +50,58 @@ namespace PIS_Storage
                 labelLoginLen.ForeColor = Color.Black;
             }
 
-            if(userPassword.Length < 5)
+            if (userPassword.Length < 5)
             {
                 labelPasswordLen.Text = "Длина 5-20 символов!";
                 labelPasswordLen.ForeColor = Color.Crimson;
-                loginTextboxesValid = false;
+                res = false;
             }
-            else 
+            else
             {
                 labelPasswordLen.Text = "Длина 5-20 символов";
                 labelPasswordLen.ForeColor = Color.Black;
             }
 
+            return res;
+        }
+
+        private void buttonLogin_Click_1(object sender, EventArgs e)
+        {
+            string userLogin = textBoxLogin.Text;
+            string userPassword = textBoxPassword.Text;
+
+            // Проверка допустимой заполненности всех полей
+            bool loginTextboxesValid = checkTextboxes(ref userLogin, ref userPassword);
+
             if(loginTextboxesValid)
             {
                 using (var db = new PIS_DbContext())
                 {
-                    List<User> currUser = (from user in db.Users
+                    List<User> currUserList = (from user in db.Users
                                            where user.Login == userLogin
                                            select user).ToList();
-                    if(currUser.Count == 0)
+
+                    // Пользователь с данным логином не найден => его не существует
+                    if(currUserList.Count == 0)
                     {
                         labelLoginLen.Text = "Пользователь с данным логином не существует!";
                         labelLoginLen.ForeColor = Color.Crimson;
                     }
                     else
                     {
-                        User currentUser = currUser.First<User>();
+                        User currentUser = currUserList.First<User>();
 
                         if (currentUser.Password == userPassword)
                         {
-                            // singleton.currentuser = currentuser;
+                            // Заполнение текущего пользователя
+                            CurrentUser current = new CurrentUser(currentUser);
 
-                            // Переход на начальный экран
+                            // Переход на начальный экран пользователя
 
                             Hide();
                             switch (currentUser.Status)
                             {
+                                // Пользователь
                                 case 0:
                                     {
                                         UserStartScreen uStartScreen = new UserStartScreen();
@@ -129,6 +110,7 @@ namespace PIS_Storage
                                         break;
                                     }
 
+                                // Менеджер
                                 case 1:
                                     {
                                         ManagerStartScreen mStartScreen = new ManagerStartScreen();
@@ -136,6 +118,8 @@ namespace PIS_Storage
                                         Close();
                                         break;
                                     }
+
+                                // Администратор
                                 case 2:
                                     {
                                         AdminStartScreen aStartScreen = new AdminStartScreen();

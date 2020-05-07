@@ -14,5 +14,6 @@ namespace PIS_Storage
 
         [Required]
         public short Amount { get; set; }
+        //public Good Good { get; set; }
     }
 }

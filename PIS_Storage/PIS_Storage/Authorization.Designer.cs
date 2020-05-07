@@ -39,17 +39,13 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.labelPasswordLen = new System.Windows.Forms.Label();
             this.labelLoginLen = new System.Windows.Forms.Label();
+            this.buttonRegister = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.buttonRegister = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.panelErrors = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.panelErrors.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -174,6 +170,18 @@
             this.labelLoginLen.Text = "Длина 5-20 символов";
             this.labelLoginLen.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // buttonRegister
+            // 
+            this.buttonRegister.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.buttonRegister.Font = new System.Drawing.Font("Calibri", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.buttonRegister.Location = new System.Drawing.Point(515, 516);
+            this.buttonRegister.Name = "buttonRegister";
+            this.buttonRegister.Size = new System.Drawing.Size(228, 56);
+            this.buttonRegister.TabIndex = 15;
+            this.buttonRegister.Text = "Регистрация";
+            this.buttonRegister.UseVisualStyleBackColor = false;
+            this.buttonRegister.Click += new System.EventHandler(this.buttonRegister_Click);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::PIS_Storage.Properties.Resources.user2;
@@ -194,58 +202,12 @@
             this.pictureBox2.TabIndex = 6;
             this.pictureBox2.TabStop = false;
             // 
-            // buttonRegister
-            // 
-            this.buttonRegister.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.buttonRegister.Font = new System.Drawing.Font("Calibri", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.buttonRegister.Location = new System.Drawing.Point(515, 516);
-            this.buttonRegister.Name = "buttonRegister";
-            this.buttonRegister.Size = new System.Drawing.Size(228, 56);
-            this.buttonRegister.TabIndex = 15;
-            this.buttonRegister.Text = "Регистрация";
-            this.buttonRegister.UseVisualStyleBackColor = false;
-            this.buttonRegister.Click += new System.EventHandler(this.buttonRegister_Click);
-            // 
-            // label4
-            // 
-            this.label4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label4.Font = new System.Drawing.Font("Calibri", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label4.Location = new System.Drawing.Point(0, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(397, 23);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Некорректный ввод!";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // label5
-            // 
-            this.label5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label5.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Italic);
-            this.label5.Location = new System.Drawing.Point(0, 23);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(374, 242);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Ошибка:";
-            // 
-            // panelErrors
-            // 
-            this.panelErrors.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.panelErrors.Controls.Add(this.label5);
-            this.panelErrors.Controls.Add(this.label4);
-            this.panelErrors.Enabled = false;
-            this.panelErrors.Location = new System.Drawing.Point(855, 372);
-            this.panelErrors.Name = "panelErrors";
-            this.panelErrors.Size = new System.Drawing.Size(397, 265);
-            this.panelErrors.TabIndex = 16;
-            this.panelErrors.Visible = false;
-            // 
             // Authorization
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1264, 681);
-            this.Controls.Add(this.panelErrors);
             this.Controls.Add(this.buttonRegister);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label3);
@@ -259,7 +221,6 @@
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.panelErrors.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -278,9 +239,6 @@
         private System.Windows.Forms.Button buttonLogin;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button buttonRegister;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Panel panelErrors;
         private System.Windows.Forms.Label labelPasswordLen;
         private System.Windows.Forms.Label labelLoginLen;
     }

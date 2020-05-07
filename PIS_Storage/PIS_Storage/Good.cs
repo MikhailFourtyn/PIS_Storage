@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace PIS_Storage
 {
@@ -22,5 +23,13 @@ namespace PIS_Storage
 
         [MaxLength(400)]
         public string PhotoPath { get; set; }
+
+        public GoodType GoodType { get; set; }
+        public ICollection<Order> Orders { get; set; }
+        public Good()
+        {
+            Orders = new List<Order>();
+        }
+        //public Storage Storage { get; set; }
     }
 }

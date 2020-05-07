@@ -23,7 +23,19 @@ namespace PIS_Storage
         [Required]
         public string Password { get; set; }
 
+        /*
+         * Перечень статусов:
+         * 0 - Пользователь;
+         * 1 - Менеджер;
+         * 2 - Администратор
+         */
         [Required]
         public byte Status { get; set; }
+
+        public ICollection<Order> Orders { get; set; }
+        public User()
+        {
+            Orders = new List<Order>();
+        }
     }
 }

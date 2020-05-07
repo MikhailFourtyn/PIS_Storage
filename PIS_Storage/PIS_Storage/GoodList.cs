@@ -23,6 +23,7 @@ namespace PIS_Storage
             using (var db = new PIS_DbContext())
             {
                 db.Goods.Load();
+                db.GoodTypes.Load();
 
                 int goodTableLen = db.Goods.Count();
 
@@ -32,8 +33,6 @@ namespace PIS_Storage
                 dataGridView1.DataSource = db.Goods.Local.ToBindingList();
 
                 
-
-                //PopulateDataGridView(ref strDataTable)
             }
         }
         private void SetupDataGridView()
@@ -44,7 +43,7 @@ namespace PIS_Storage
             dataGridView1.Dock = DockStyle.Fill;
         }
 
-        private void PopulateDataGridView(ref List<List<string>> strDataTable)
+        private void buttonViewFull_Click(object sender, EventArgs e)
         {
 
         }

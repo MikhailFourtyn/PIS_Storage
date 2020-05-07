@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System;
-using System.Collections.Generic;
 using System.Data.Entity;
 using System.ComponentModel.DataAnnotations;
 
@@ -24,5 +22,7 @@ namespace PIS_Storage
 
         [Required]
         public int OrderStatusChangesId { get; set; }
+        public Good Good { get; set; }
+        public User User { get; set; }
     }
 }

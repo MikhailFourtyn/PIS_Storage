@@ -68,6 +68,7 @@
     <Compile Include="Authorization.Designer.cs">
       <DependentUpon>Authorization.cs</DependentUpon>
     </Compile>
+    <Compile Include="CurrentUser.cs" />
     <Compile Include="Good.cs" />
     <Compile Include="GoodList.cs">
       <SubType>Form</SubType>
@@ -125,6 +126,10 @@
     <Compile Include="Migrations\202005062228243_AddGoodType.cs" />
     <Compile Include="Migrations\202005062228243_AddGoodType.designer.cs">
       <DependentUpon>202005062228243_AddGoodType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005071430438_AddEntitiesConnections.cs" />
+    <Compile Include="Migrations\202005071430438_AddEntitiesConnections.designer.cs">
+      <DependentUpon>202005071430438_AddEntitiesConnections.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Order.cs" />
@@ -196,6 +201,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202005062228243_AddGoodType.resx">
       <DependentUpon>202005062228243_AddGoodType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005071430438_AddEntitiesConnections.resx">
+      <DependentUpon>202005071430438_AddEntitiesConnections.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

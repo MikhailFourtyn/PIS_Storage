@@ -11,5 +11,16 @@ namespace PIS_Storage
         [MaxLength(80)]
         [Required]
         public string Name { get; set; }
+
+        public override string ToString()
+        {
+            return Name;
+        }
+
+        public ICollection<Good> Goods { get; set; }
+        public GoodType()
+        {
+            Goods = new List<Good>();
+        }
     }
 }
