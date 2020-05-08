@@ -28,7 +28,7 @@ namespace PIS_Storage
 
             InitFormParams();
         }
-
+        // Переход на форму просмотра товаров для пользователя
         private void buttonOpenGoodList_Click(object sender, EventArgs e)
         {
             Hide();
@@ -37,6 +37,7 @@ namespace PIS_Storage
             Close();
         }
 
+        // Переход на форму просмотра заказов пользователя
         private void buttonViewOrders_Click(object sender, EventArgs e)
         {
             UserOrderList orderList = new UserOrderList();

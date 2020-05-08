@@ -58,6 +58,7 @@ namespace PIS_Storage.Forms.AdminForms
                     labelType.Text = goodOnView.GoodType.ToString();
                     textBoxPrice.Text = goodOnView.Price.ToString();
                     textBoxAmount.Text = goodOnView.Amount.ToString();
+
                     // В случае отсутствия фото - заглушка
                     if (goodOnView.PhotoPath == null)
                         pictureBoxImage.Image = Properties.Resources.noImage;
@@ -67,6 +68,7 @@ namespace PIS_Storage.Forms.AdminForms
                 comboBoxType.DataSource = db.GoodTypes.ToList();
             }
 
+            // Настройка элементов для чтения, но не редактирования
             InitElementsForViewing();
         }
 

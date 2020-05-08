@@ -12,6 +12,7 @@ using PIS_Storage.Forms.UserForms;
 
 namespace PIS_Storage
 {
+    // Форма просмотра товаров пользователем
     public partial class GoodList : Form
     {
         // Инициализация параметров формы - размера, возможности растягивать и стартового положения на экране
@@ -39,21 +40,25 @@ namespace PIS_Storage
 
             SetupDataGridView();
 
-            buttonApplyFilters.Enabled = false;
+            // На запуске формы - просмотр без фильтров. Для включения фильтров отмечается соответствующий checkBox
+            EnableFiltersElements(false);
 
             using (var db = new PIS_DbContext())
             {
                 db.Goods.Load();
                 db.GoodTypes.Load();
 
+                // Заполнение таблицы и comboBox
                 dataGridView1.DataSource = db.Goods.Local.ToBindingList();
 
                 comboBoxByType.DataSource = db.GoodTypes.ToList();
             }
         }
 
+        // Переход на форму просмотра подробной информации о товаре
         private void buttonViewFull_Click(object sender, EventArgs e)
         {
+            // Если выделена строка, то передаем GoodId в форму. Иначе - отображение ошибки
             object val = dataGridView1.CurrentRow.Cells[0].Value;
             if(val != null)
             {
@@ -67,8 +72,10 @@ namespace PIS_Storage
             }
         }
 
+        // Переход на форму оформления заказа
         private void buttonArrangeOrder_Click(object sender, EventArgs e)
         {
+            // Если выделена строка, то передаем GoodId в форму. Иначе - отображение ошибки
             object val = dataGridView1.CurrentRow.Cells[0].Value;
             if (val != null)
             {
@@ -82,6 +89,7 @@ namespace PIS_Storage
             }
         }
 
+        // Кнопка "Обновить" - перезагрузка таблицы
         private void buttonUpdate_Click(object sender, EventArgs e)
         {
             using (var db = new PIS_DbContext())
@@ -89,13 +97,16 @@ namespace PIS_Storage
                 db.Goods.Load();
                 db.GoodTypes.Load();
 
+                // Очищаем таблицу
                 dataGridView1.SelectAll();
                 dataGridView1.ClearSelection();
 
+                // Заполняем таблицу
                 dataGridView1.DataSource = db.Goods.Local.ToBindingList();
             }
         }
 
+        // Кнопка "Назад" - переход обратно на стартовый экран пользователя
         private void buttonBack_Click(object sender, EventArgs e)
         {
             Hide();
@@ -104,6 +115,7 @@ namespace PIS_Storage
             Close();
         }
 
+        // Кнопка "Применить фильтры"
         private void buttonApplyFilters_Click(object sender, EventArgs e)
         {
             dataGridView1.SelectAll();
@@ -148,20 +160,30 @@ namespace PIS_Storage
             }
         }
 
+        // Включение-выключение доступа к элементам фильтров
+        void EnableFiltersElements(bool state)
+        {
+            buttonApplyFilters.Enabled = state;
+            comboBoxByAvailable.Enabled = state;
+            comboBoxByType.Enabled = state;
+        }
+
+        // При клике по любому из checkBox проверям - если хотя бы один из них включен, то включаем доступ к фильтрам
         private void checkBoxByAvailable_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBoxByAvailable.Checked || checkBoxByType.Checked)
-                buttonApplyFilters.Enabled = true;
+                EnableFiltersElements(true);
             else
-                buttonApplyFilters.Enabled = false;
+                EnableFiltersElements(false);
         }
 
+        // При клике по любому из checkBox проверям - если хотя бы один из них включен, то включаем доступ к фильтрам
         private void checkBoxByType_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBoxByAvailable.Checked || checkBoxByType.Checked)
-                buttonApplyFilters.Enabled = true;
+                EnableFiltersElements(true);
             else
-                buttonApplyFilters.Enabled = false;
+                EnableFiltersElements(false);
         }
     }
 }
