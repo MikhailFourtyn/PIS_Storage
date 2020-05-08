@@ -100,6 +100,12 @@
     </Compile>
     <Compile Include="CurrentUser.cs" />
     <Compile Include="DB Entities\Good.cs" />
+    <Compile Include="Forms\DemoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DemoForm.Designer.cs">
+      <DependentUpon>DemoForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ManagerForms\ManagerOrderList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -243,6 +249,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Authorization.resx">
       <DependentUpon>Authorization.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DemoForm.resx">
+      <DependentUpon>DemoForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ManagerForms\ManagerOrderList.resx">
       <DependentUpon>ManagerOrderList.cs</DependentUpon>
