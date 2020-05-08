@@ -49,6 +49,7 @@ namespace PIS_Storage.Forms.AdminForms
                     else
                         pictureBoxImage.ImageLocation = goodOnView.PhotoPath;
                 }
+                comboBoxType.DataSource = db.GoodTypes.ToList();
             }
 
             InitElementsForViewing();

@@ -36,7 +36,38 @@ namespace PIS_Storage
             Close();
         }
 
-        private void buttonLogin_Click(object sender, EventArgs e)
+        bool checkTextboxes(ref string userLogin, ref string userPassword)
+        {
+            bool res = true;
+
+            if (userLogin.Length < 5)
+            {
+                labelLoginLen.Text = "Длина 5-20 символов!";
+                labelLoginLen.ForeColor = Color.Crimson;
+                res = false;
+            }
+            else
+            {
+                labelLoginLen.Text = "Длина 5-20 символов";
+                labelLoginLen.ForeColor = Color.Black;
+            }
+
+            if (userPassword.Length < 5)
+            {
+                labelPasswordLen.Text = "Длина 5-20 символов!";
+                labelPasswordLen.ForeColor = Color.Crimson;
+                res = false;
+            }
+            else
+            {
+                labelPasswordLen.Text = "Длина 5-20 символов";
+                labelPasswordLen.ForeColor = Color.Black;
+            }
+
+            return res;
+        }
+
+        private void buttonLogin_Click_1(object sender, EventArgs e)
         {
             string userLogin = textBoxLogin.Text;
             string userPassword = textBoxPassword.Text;
@@ -48,20 +79,9 @@ namespace PIS_Storage
             {
                 using (var db = new PIS_DbContext())
                 {
-                    List<User> currUserList = (from user in db.Users
-                                               where user.Login == userLogin
-                                               select user).ToList();
-
-                    // Пользователь с данным логином не найден => его не существует
-                    if (currUserList.Count == 0)
+                    User currentUser = db.Users.SingleOrDefault(u => u.Login == userLogin);
+                    if (currentUser != null)
                     {
-                        labelLoginLen.Text = "Пользователь с данным логином не существует!";
-                        labelLoginLen.ForeColor = Color.Crimson;
-                    }
-                    else
-                    {
-                        User currentUser = currUserList.First<User>();
-
                         if (currentUser.Password == userPassword)
                         {
                             // Заполнение текущего пользователя
@@ -107,50 +127,22 @@ namespace PIS_Storage
                                     }
                             }
                         }
+                        // currentUser.Password != userPassword
                         else
                         {
                             labelPasswordLen.Text = "Неверный пароль!";
                             labelPasswordLen.ForeColor = Color.Crimson;
                         }
                     }
+                    // currentUser == null
+                    else
+                    {
+                        // Пользователь с данным логином не найден => его не существует
+                        labelLoginLen.Text = "Пользователь с данным логином не существует!";
+                        labelLoginLen.ForeColor = Color.Crimson;
+                    }
                 }
             }
-        }
-
-        bool checkTextboxes(ref string userLogin, ref string userPassword)
-        {
-            bool res = true;
-
-            if (userLogin.Length < 5)
-            {
-                labelLoginLen.Text = "Длина 5-20 символов!";
-                labelLoginLen.ForeColor = Color.Crimson;
-                res = false;
-            }
-            else
-            {
-                labelLoginLen.Text = "Длина 5-20 символов";
-                labelLoginLen.ForeColor = Color.Black;
-            }
-
-            if (userPassword.Length < 5)
-            {
-                labelPasswordLen.Text = "Длина 5-20 символов!";
-                labelPasswordLen.ForeColor = Color.Crimson;
-                res = false;
-            }
-            else
-            {
-                labelPasswordLen.Text = "Длина 5-20 символов";
-                labelPasswordLen.ForeColor = Color.Black;
-            }
-
-            return res;
-        }
-
-        private void buttonLogin_Click_1(object sender, EventArgs e)
-        {
-            
         }
 
     }

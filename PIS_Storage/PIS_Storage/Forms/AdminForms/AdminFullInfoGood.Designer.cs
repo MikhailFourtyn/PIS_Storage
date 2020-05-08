@@ -28,12 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.buttonAddPhoto = new System.Windows.Forms.Button();
             this.buttonBack = new System.Windows.Forms.Button();
             this.buttonUpdate = new System.Windows.Forms.Button();
             this.textBoxAmount = new System.Windows.Forms.TextBox();
             this.textBoxPrice = new System.Windows.Forms.TextBox();
             this.comboBoxType = new System.Windows.Forms.ComboBox();
+            this.goodTypeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.textBoxName = new System.Windows.Forms.TextBox();
             this.labelAmount = new System.Windows.Forms.Label();
             this.labelTypeMsg = new System.Windows.Forms.Label();
@@ -43,6 +45,7 @@
             this.labelType = new System.Windows.Forms.Label();
             this.buttonEditType = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.goodTypeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).BeginInit();
             this.SuspendLayout();
             // 
@@ -98,18 +101,17 @@
             // 
             // comboBoxType
             // 
+            this.comboBoxType.DataSource = this.goodTypeBindingSource;
+            this.comboBoxType.DisplayMember = "Name";
             this.comboBoxType.FormattingEnabled = true;
-            this.comboBoxType.Items.AddRange(new object[] {
-            "Мебель",
-            "Столы",
-            "Бытовая техника",
-            "Клавиатуры",
-            "Телефоны",
-            "Комьютерные мыши"});
             this.comboBoxType.Location = new System.Drawing.Point(342, 296);
             this.comboBoxType.Name = "comboBoxType";
             this.comboBoxType.Size = new System.Drawing.Size(193, 21);
             this.comboBoxType.TabIndex = 33;
+            // 
+            // goodTypeBindingSource
+            // 
+            this.goodTypeBindingSource.DataSource = typeof(PIS_Storage.GoodType);
             // 
             // textBoxName
             // 
@@ -222,6 +224,7 @@
             this.Controls.Add(this.labelName);
             this.Name = "AdminFullInfoGood";
             this.Text = "AdminFullInfoGood";
+            ((System.ComponentModel.ISupportInitialize)(this.goodTypeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -245,5 +248,6 @@
         private System.Windows.Forms.Label labelType;
         private System.Windows.Forms.Button buttonEditType;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.BindingSource goodTypeBindingSource;
     }
 }
