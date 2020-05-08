@@ -17,5 +17,22 @@ namespace PIS_Storage
 
         //public DateTime Timestamp { get; set; }
         // Уточнить тип данных
+        public Order Order { get; set; }
+        public override string ToString()
+        {
+            switch(OrderStatus)
+            {
+                case 0:
+                    return "Оформлен";
+                case 1:
+                    return "Упакован";
+                case 2:
+                    return "Отправлен на доставку";
+                case 3:
+                    return "Доставлен";
+                default:
+                    return "";
+            }
+        }
     }
 }

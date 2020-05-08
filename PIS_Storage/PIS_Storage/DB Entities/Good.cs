@@ -23,6 +23,8 @@ namespace PIS_Storage
 
         [MaxLength(400)]
         public string PhotoPath { get; set; }
+        [Required]
+        public short Amount { get; set; }
 
         public GoodType GoodType { get; set; }
         public ICollection<Order> Orders { get; set; }

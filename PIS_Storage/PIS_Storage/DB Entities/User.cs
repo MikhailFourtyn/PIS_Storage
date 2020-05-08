@@ -30,12 +30,35 @@ namespace PIS_Storage
          * 2 - Администратор
          */
         [Required]
-        public byte Status { get; set; }
+        public byte Status 
+        { 
+            get; 
+            set;
+        }
 
         public ICollection<Order> Orders { get; set; }
         public User()
         {
             Orders = new List<Order>();
+        }
+        public override string ToString()
+        {
+            return Name;
+        }
+
+        public string StatusToString()
+        {
+            switch(Status)
+            {
+                case 0:
+                    return "Пользователь";
+                case 1:
+                    return "Менеджер";
+                case 2:
+                    return "Администратор";
+                default:
+                    return "Пользователь";
+            }
         }
     }
 }

@@ -28,29 +28,54 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.buttonOpenOrderList = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonShowOrderList = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.buttonShowGoodList = new System.Windows.Forms.Button();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // buttonOpenOrderList
+            // buttonShowOrderList
             // 
-            this.buttonOpenOrderList.Font = new System.Drawing.Font("Calibri", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.buttonOpenOrderList.Location = new System.Drawing.Point(229, 67);
-            this.buttonOpenOrderList.Name = "buttonOpenOrderList";
-            this.buttonOpenOrderList.Size = new System.Drawing.Size(322, 97);
-            this.buttonOpenOrderList.TabIndex = 14;
-            this.buttonOpenOrderList.Text = "Просмотреть список заказов";
-            this.buttonOpenOrderList.UseVisualStyleBackColor = true;
+            this.buttonShowOrderList.Font = new System.Drawing.Font("Calibri", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.buttonShowOrderList.Location = new System.Drawing.Point(439, 304);
+            this.buttonShowOrderList.Name = "buttonShowOrderList";
+            this.buttonShowOrderList.Size = new System.Drawing.Size(322, 97);
+            this.buttonShowOrderList.TabIndex = 14;
+            this.buttonShowOrderList.Text = "Просмотреть список заказов";
+            this.buttonShowOrderList.UseVisualStyleBackColor = true;
+            this.buttonShowOrderList.Click += new System.EventHandler(this.buttonShowOrderList_Click);
             // 
-            // button1
+            // panel2
             // 
-            this.button1.Font = new System.Drawing.Font("Calibri", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.button1.Location = new System.Drawing.Point(229, 181);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(322, 97);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "Просмотреть список товаров";
-            this.button1.UseVisualStyleBackColor = true;
+            this.panel2.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1264, 60);
+            this.panel2.TabIndex = 18;
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Calibri", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(1, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(1264, 60);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Добро пожаловать!";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // buttonShowGoodList
+            // 
+            this.buttonShowGoodList.Font = new System.Drawing.Font("Calibri", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.buttonShowGoodList.Location = new System.Drawing.Point(439, 171);
+            this.buttonShowGoodList.Name = "buttonShowGoodList";
+            this.buttonShowGoodList.Size = new System.Drawing.Size(322, 97);
+            this.buttonShowGoodList.TabIndex = 19;
+            this.buttonShowGoodList.Text = "Просмотреть список товаров";
+            this.buttonShowGoodList.UseVisualStyleBackColor = true;
+            this.buttonShowGoodList.Click += new System.EventHandler(this.buttonShowGoodList_Click);
             // 
             // ManagerStartScreen
             // 
@@ -58,18 +83,22 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1264, 681);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.buttonOpenOrderList);
+            this.Controls.Add(this.buttonShowGoodList);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.buttonShowOrderList);
             this.MaximizeBox = false;
             this.Name = "ManagerStartScreen";
             this.Text = "ManagerStartScreen";
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button buttonOpenOrderList;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonShowOrderList;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button buttonShowGoodList;
     }
 }

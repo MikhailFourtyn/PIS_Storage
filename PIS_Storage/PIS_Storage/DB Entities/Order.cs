@@ -24,5 +24,10 @@ namespace PIS_Storage
         public int OrderStatusChangesId { get; set; }
         public Good Good { get; set; }
         public User User { get; set; }
+        public ICollection<OrderStatusChange> OrderStatusChanges { get; set; }
+        public Order()
+        {
+            OrderStatusChanges = new List<OrderStatusChange>();
+        }
     }
 }

@@ -12,9 +12,19 @@ namespace PIS_Storage
 {
     public partial class Registration : Form
     {
+        private void InitFormParams()
+        {
+            this.StartPosition = FormStartPosition.CenterParent;
+            this.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            this.Width = 1280;
+            this.Height = 720;
+            this.MaximizeBox = false;
+        }
         public Registration()
         {
             InitializeComponent();
+
+            InitFormParams();
         }
 
         private void buttonReturnBack_Click(object sender, EventArgs e)

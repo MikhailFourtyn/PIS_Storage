@@ -12,9 +12,9 @@ namespace PIS_Storage
         [STAThread]
         static void Main()
         {
-            using(var context = new PIS_DbContext())
+            using(var db = new PIS_DbContext())
             {
-
+                
             }
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

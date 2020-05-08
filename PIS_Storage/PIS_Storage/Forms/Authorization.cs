@@ -13,9 +13,19 @@ namespace PIS_Storage
 {
     public partial class Authorization : Form
     {
+        private void InitFormParams()
+        {
+            this.StartPosition = FormStartPosition.CenterParent;
+            this.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            this.Width = 1280;
+            this.Height = 720;
+            this.MaximizeBox = false;
+        }
         public Authorization()
         {
             InitializeComponent();
+
+            InitFormParams();
         }
 
         private void buttonRegister_Click(object sender, EventArgs e)
@@ -28,61 +38,22 @@ namespace PIS_Storage
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-            Hide();
-            GoodList auth = new GoodList();
-            auth.ShowDialog();
-            Close();
-        }
-
-        bool checkTextboxes(ref string userLogin, ref string userPassword)
-        {
-            bool res = true;
-
-            if (userLogin.Length < 5)
-            {
-                labelLoginLen.Text = "Длина 5-20 символов!";
-                labelLoginLen.ForeColor = Color.Crimson;
-                res = false;
-            }
-            else
-            {
-                labelLoginLen.Text = "Длина 5-20 символов";
-                labelLoginLen.ForeColor = Color.Black;
-            }
-
-            if (userPassword.Length < 5)
-            {
-                labelPasswordLen.Text = "Длина 5-20 символов!";
-                labelPasswordLen.ForeColor = Color.Crimson;
-                res = false;
-            }
-            else
-            {
-                labelPasswordLen.Text = "Длина 5-20 символов";
-                labelPasswordLen.ForeColor = Color.Black;
-            }
-
-            return res;
-        }
-
-        private void buttonLogin_Click_1(object sender, EventArgs e)
-        {
             string userLogin = textBoxLogin.Text;
             string userPassword = textBoxPassword.Text;
 
             // Проверка допустимой заполненности всех полей
             bool loginTextboxesValid = checkTextboxes(ref userLogin, ref userPassword);
 
-            if(loginTextboxesValid)
+            if (loginTextboxesValid)
             {
                 using (var db = new PIS_DbContext())
                 {
                     List<User> currUserList = (from user in db.Users
-                                           where user.Login == userLogin
-                                           select user).ToList();
+                                               where user.Login == userLogin
+                                               select user).ToList();
 
                     // Пользователь с данным логином не найден => его не существует
-                    if(currUserList.Count == 0)
+                    if (currUserList.Count == 0)
                     {
                         labelLoginLen.Text = "Пользователь с данным логином не существует!";
                         labelLoginLen.ForeColor = Color.Crimson;
@@ -144,6 +115,42 @@ namespace PIS_Storage
                     }
                 }
             }
+        }
+
+        bool checkTextboxes(ref string userLogin, ref string userPassword)
+        {
+            bool res = true;
+
+            if (userLogin.Length < 5)
+            {
+                labelLoginLen.Text = "Длина 5-20 символов!";
+                labelLoginLen.ForeColor = Color.Crimson;
+                res = false;
+            }
+            else
+            {
+                labelLoginLen.Text = "Длина 5-20 символов";
+                labelLoginLen.ForeColor = Color.Black;
+            }
+
+            if (userPassword.Length < 5)
+            {
+                labelPasswordLen.Text = "Длина 5-20 символов!";
+                labelPasswordLen.ForeColor = Color.Crimson;
+                res = false;
+            }
+            else
+            {
+                labelPasswordLen.Text = "Длина 5-20 символов";
+                labelPasswordLen.ForeColor = Color.Black;
+            }
+
+            return res;
+        }
+
+        private void buttonLogin_Click_1(object sender, EventArgs e)
+        {
+            
         }
 
     }

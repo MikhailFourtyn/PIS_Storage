@@ -12,16 +12,27 @@ namespace PIS_Storage
 {
     public partial class StartScreen : Form
     {
+        private void InitFormParams()
+        {
+            this.StartPosition = FormStartPosition.CenterScreen;
+            this.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            this.Width = 1280;
+            this.Height = 720;
+            this.MaximizeBox = false;
+        }
+
         public StartScreen()
         {
             InitializeComponent();
+
+            InitFormParams();
 
             OpenFileDialog ofd = new OpenFileDialog();
 
             pictureBox1.Image = Properties.Resources.storage;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonLogin_Click(object sender, EventArgs e)
         {
             Hide();
             Authorization auth = new Authorization();
