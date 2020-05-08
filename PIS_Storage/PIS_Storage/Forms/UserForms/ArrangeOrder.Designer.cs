@@ -37,13 +37,15 @@
             this.labelAmountInStorage = new System.Windows.Forms.Label();
             this.pictureBoxImage = new System.Windows.Forms.PictureBox();
             this.buttonBack = new System.Windows.Forms.Button();
+            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // labelType
             // 
             this.labelType.Font = new System.Drawing.Font("Calibri", 16F);
-            this.labelType.Location = new System.Drawing.Point(12, 120);
+            this.labelType.Location = new System.Drawing.Point(21, 204);
             this.labelType.Name = "labelType";
             this.labelType.Size = new System.Drawing.Size(734, 49);
             this.labelType.TabIndex = 17;
@@ -54,7 +56,7 @@
             // labelPrice
             // 
             this.labelPrice.Font = new System.Drawing.Font("Calibri", 16F);
-            this.labelPrice.Location = new System.Drawing.Point(12, 182);
+            this.labelPrice.Location = new System.Drawing.Point(21, 266);
             this.labelPrice.Name = "labelPrice";
             this.labelPrice.Size = new System.Drawing.Size(463, 49);
             this.labelPrice.TabIndex = 15;
@@ -65,7 +67,7 @@
             // labelName
             // 
             this.labelName.Font = new System.Drawing.Font("Calibri", 16F);
-            this.labelName.Location = new System.Drawing.Point(12, 71);
+            this.labelName.Location = new System.Drawing.Point(21, 155);
             this.labelName.Name = "labelName";
             this.labelName.Size = new System.Drawing.Size(734, 49);
             this.labelName.TabIndex = 13;
@@ -76,7 +78,7 @@
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Calibri", 16F);
-            this.label2.Location = new System.Drawing.Point(12, 303);
+            this.label2.Location = new System.Drawing.Point(21, 387);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(423, 49);
             this.label2.TabIndex = 19;
@@ -86,7 +88,7 @@
             // textBoxAmount
             // 
             this.textBoxAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.textBoxAmount.Location = new System.Drawing.Point(428, 316);
+            this.textBoxAmount.Location = new System.Drawing.Point(437, 400);
             this.textBoxAmount.MaxLength = 5;
             this.textBoxAmount.Name = "textBoxAmount";
             this.textBoxAmount.Size = new System.Drawing.Size(176, 29);
@@ -107,7 +109,7 @@
             // labelAmountInStorage
             // 
             this.labelAmountInStorage.Font = new System.Drawing.Font("Calibri", 16F);
-            this.labelAmountInStorage.Location = new System.Drawing.Point(12, 235);
+            this.labelAmountInStorage.Location = new System.Drawing.Point(21, 319);
             this.labelAmountInStorage.Name = "labelAmountInStorage";
             this.labelAmountInStorage.Size = new System.Drawing.Size(463, 49);
             this.labelAmountInStorage.TabIndex = 22;
@@ -127,7 +129,7 @@
             // 
             this.buttonBack.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.buttonBack.Font = new System.Drawing.Font("Calibri", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.buttonBack.Location = new System.Drawing.Point(17, 24);
+            this.buttonBack.Location = new System.Drawing.Point(26, 108);
             this.buttonBack.Name = "buttonBack";
             this.buttonBack.Size = new System.Drawing.Size(135, 41);
             this.buttonBack.TabIndex = 23;
@@ -135,11 +137,22 @@
             this.buttonBack.UseVisualStyleBackColor = false;
             this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
             // 
+            // pictureBoxLogo
+            // 
+            this.pictureBoxLogo.Image = global::PIS_Storage.Properties.Resources.logo;
+            this.pictureBoxLogo.Location = new System.Drawing.Point(12, 12);
+            this.pictureBoxLogo.Name = "pictureBoxLogo";
+            this.pictureBoxLogo.Size = new System.Drawing.Size(149, 61);
+            this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxLogo.TabIndex = 24;
+            this.pictureBoxLogo.TabStop = false;
+            // 
             // ArrangeOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.pictureBoxLogo);
             this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.labelAmountInStorage);
             this.Controls.Add(this.buttonArrangeOrder);
@@ -152,6 +165,7 @@
             this.Name = "ArrangeOrder";
             this.Text = "ArrangeOrder";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -167,5 +181,6 @@
         private System.Windows.Forms.Button buttonArrangeOrder;
         private System.Windows.Forms.Label labelAmountInStorage;
         private System.Windows.Forms.Button buttonBack;
+        private System.Windows.Forms.PictureBox pictureBoxLogo;
     }
 }

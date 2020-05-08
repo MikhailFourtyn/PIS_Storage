@@ -16,6 +16,7 @@ namespace PIS_Storage.Forms.UserForms
         private int _orderedGoodId;
 
         private Good orderedGood;
+        // Инициализация параметров формы - размера, возможности растягивать и стартового положения на экране
         private void InitFormParams()
         {
             this.StartPosition = FormStartPosition.CenterParent;

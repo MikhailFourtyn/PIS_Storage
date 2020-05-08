@@ -14,6 +14,7 @@ namespace PIS_Storage.Forms.AdminForms
     
     public partial class AdminUserList : Form
     {
+        // Инициализация параметров формы - размера, возможности растягивать и стартового положения на экране
         private void InitFormParams()
         {
             this.StartPosition = FormStartPosition.CenterParent;
@@ -21,6 +22,15 @@ namespace PIS_Storage.Forms.AdminForms
             this.Width = 1280;
             this.Height = 720;
             this.MaximizeBox = false;
+        }
+
+        // Настройка отображения таблицы
+        private void SetupDataGridView()
+        {
+            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dataGridView1.MultiSelect = false;
+            dataGridView1.Dock = DockStyle.Fill;
         }
         public AdminUserList()
         {
@@ -50,23 +60,18 @@ namespace PIS_Storage.Forms.AdminForms
 
                 foreach(DataGridViewRow r in dataGridView1.Rows)
                 {
+                    /*
                     if (r.Cells[4].Value.ToString() == "0")
                         r.Cells[4].Value = "Пользователь";
                     if (r.Cells[4].Value.ToString() == "1")
                         r.Cells[4].Value = "Менеджер";
                     if (r.Cells[4].Value.ToString() == "2")
                         r.Cells[4].Value = "Администратор";
+                        */
                 }
             }
         }
 
-        private void SetupDataGridView()
-        {
-            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            dataGridView1.MultiSelect = false;
-            dataGridView1.Dock = DockStyle.Fill;
-        }
 
         private void buttonUpdateDataGridView_Click(object sender, EventArgs e)
         {
@@ -105,6 +110,11 @@ namespace PIS_Storage.Forms.AdminForms
             {
                 MessageBox.Show("Выберите строку с пользователем для получения подробной информации!");
             }
+        }
+
+        private void buttonBack_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

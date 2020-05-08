@@ -32,15 +32,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.buttonBack = new System.Windows.Forms.Button();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.buttonUpdate = new System.Windows.Forms.Button();
-            this.buttonRemove = new System.Windows.Forms.Button();
-            this.buttonAdd = new System.Windows.Forms.Button();
-            this.buttonViewFull = new System.Windows.Forms.Button();
-            this.orderBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.orderIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.goodIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.userIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,17 +40,29 @@
             this.Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.User = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.OrderStatusChanges = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.orderBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.buttonBack = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.buttonUpdatedataGridView = new System.Windows.Forms.Button();
+            this.buttonUpdate = new System.Windows.Forms.Button();
+            this.buttonRemove = new System.Windows.Forms.Button();
+            this.buttonAdd = new System.Windows.Forms.Button();
+            this.buttonViewFull = new System.Windows.Forms.Button();
+            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).BeginInit();
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel2.Controls.Add(this.pictureBoxLogo);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
@@ -97,100 +100,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(1056, 519);
             this.dataGridView1.TabIndex = 28;
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.buttonBack);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel5.Location = new System.Drawing.Point(0, 60);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(192, 519);
-            this.panel5.TabIndex = 27;
-            // 
-            // buttonBack
-            // 
-            this.buttonBack.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.buttonBack.Font = new System.Drawing.Font("Calibri", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.buttonBack.Location = new System.Drawing.Point(12, 6);
-            this.buttonBack.Name = "buttonBack";
-            this.buttonBack.Size = new System.Drawing.Size(141, 41);
-            this.buttonBack.TabIndex = 18;
-            this.buttonBack.Text = "Назад";
-            this.buttonBack.UseVisualStyleBackColor = false;
-            this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
-            // 
-            // panel4
-            // 
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(1248, 60);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(16, 519);
-            this.panel4.TabIndex = 26;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.buttonUpdatedataGridView);
-            this.panel3.Controls.Add(this.buttonUpdate);
-            this.panel3.Controls.Add(this.buttonRemove);
-            this.panel3.Controls.Add(this.buttonAdd);
-            this.panel3.Controls.Add(this.buttonViewFull);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 579);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1264, 102);
-            this.panel3.TabIndex = 25;
-            // 
-            // buttonUpdate
-            // 
-            this.buttonUpdate.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.buttonUpdate.Font = new System.Drawing.Font("Calibri", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.buttonUpdate.Location = new System.Drawing.Point(805, 6);
-            this.buttonUpdate.Name = "buttonUpdate";
-            this.buttonUpdate.Size = new System.Drawing.Size(197, 41);
-            this.buttonUpdate.TabIndex = 17;
-            this.buttonUpdate.Text = "Продвинуть статус";
-            this.buttonUpdate.UseVisualStyleBackColor = false;
-            this.buttonUpdate.Click += new System.EventHandler(this.buttonUpdate_Click);
-            // 
-            // buttonRemove
-            // 
-            this.buttonRemove.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.buttonRemove.Font = new System.Drawing.Font("Calibri", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.buttonRemove.Location = new System.Drawing.Point(639, 6);
-            this.buttonRemove.Name = "buttonRemove";
-            this.buttonRemove.Size = new System.Drawing.Size(141, 41);
-            this.buttonRemove.TabIndex = 16;
-            this.buttonRemove.Text = "Удалить";
-            this.buttonRemove.UseVisualStyleBackColor = false;
-            this.buttonRemove.Click += new System.EventHandler(this.buttonRemove_Click);
-            // 
-            // buttonAdd
-            // 
-            this.buttonAdd.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.buttonAdd.Font = new System.Drawing.Font("Calibri", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.buttonAdd.Location = new System.Drawing.Point(479, 6);
-            this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(141, 41);
-            this.buttonAdd.TabIndex = 15;
-            this.buttonAdd.Text = "Добавить";
-            this.buttonAdd.UseVisualStyleBackColor = false;
-            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
-            // 
-            // buttonViewFull
-            // 
-            this.buttonViewFull.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.buttonViewFull.Font = new System.Drawing.Font("Calibri", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.buttonViewFull.Location = new System.Drawing.Point(149, 6);
-            this.buttonViewFull.Name = "buttonViewFull";
-            this.buttonViewFull.Size = new System.Drawing.Size(314, 41);
-            this.buttonViewFull.TabIndex = 14;
-            this.buttonViewFull.Text = "Просмотреть данные о заказе";
-            this.buttonViewFull.UseVisualStyleBackColor = false;
-            this.buttonViewFull.Click += new System.EventHandler(this.buttonViewFull_Click);
-            // 
-            // orderBindingSource
-            // 
-            this.orderBindingSource.DataSource = typeof(PIS_Storage.Order);
             // 
             // orderIdDataGridViewTextBoxColumn
             // 
@@ -260,6 +169,52 @@
             this.OrderStatusChanges.Name = "OrderStatusChanges";
             this.OrderStatusChanges.ReadOnly = true;
             // 
+            // orderBindingSource
+            // 
+            this.orderBindingSource.DataSource = typeof(PIS_Storage.Order);
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.buttonBack);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel5.Location = new System.Drawing.Point(0, 60);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(192, 519);
+            this.panel5.TabIndex = 27;
+            // 
+            // buttonBack
+            // 
+            this.buttonBack.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.buttonBack.Font = new System.Drawing.Font("Calibri", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.buttonBack.Location = new System.Drawing.Point(12, 6);
+            this.buttonBack.Name = "buttonBack";
+            this.buttonBack.Size = new System.Drawing.Size(141, 41);
+            this.buttonBack.TabIndex = 18;
+            this.buttonBack.Text = "Назад";
+            this.buttonBack.UseVisualStyleBackColor = false;
+            this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
+            // 
+            // panel4
+            // 
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel4.Location = new System.Drawing.Point(1248, 60);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(16, 519);
+            this.panel4.TabIndex = 26;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.buttonUpdatedataGridView);
+            this.panel3.Controls.Add(this.buttonUpdate);
+            this.panel3.Controls.Add(this.buttonRemove);
+            this.panel3.Controls.Add(this.buttonAdd);
+            this.panel3.Controls.Add(this.buttonViewFull);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.Location = new System.Drawing.Point(0, 579);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1264, 102);
+            this.panel3.TabIndex = 25;
+            // 
             // buttonUpdatedataGridView
             // 
             this.buttonUpdatedataGridView.BackColor = System.Drawing.SystemColors.ButtonFace;
@@ -271,6 +226,64 @@
             this.buttonUpdatedataGridView.Text = "Обновить";
             this.buttonUpdatedataGridView.UseVisualStyleBackColor = false;
             this.buttonUpdatedataGridView.Click += new System.EventHandler(this.buttonUpdatedataGridView_Click);
+            // 
+            // buttonUpdate
+            // 
+            this.buttonUpdate.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.buttonUpdate.Font = new System.Drawing.Font("Calibri", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.buttonUpdate.Location = new System.Drawing.Point(805, 6);
+            this.buttonUpdate.Name = "buttonUpdate";
+            this.buttonUpdate.Size = new System.Drawing.Size(197, 41);
+            this.buttonUpdate.TabIndex = 17;
+            this.buttonUpdate.Text = "Продвинуть статус";
+            this.buttonUpdate.UseVisualStyleBackColor = false;
+            this.buttonUpdate.Click += new System.EventHandler(this.buttonUpdate_Click);
+            // 
+            // buttonRemove
+            // 
+            this.buttonRemove.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.buttonRemove.Font = new System.Drawing.Font("Calibri", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.buttonRemove.Location = new System.Drawing.Point(639, 6);
+            this.buttonRemove.Name = "buttonRemove";
+            this.buttonRemove.Size = new System.Drawing.Size(141, 41);
+            this.buttonRemove.TabIndex = 16;
+            this.buttonRemove.Text = "Удалить";
+            this.buttonRemove.UseVisualStyleBackColor = false;
+            this.buttonRemove.Click += new System.EventHandler(this.buttonRemove_Click);
+            // 
+            // buttonAdd
+            // 
+            this.buttonAdd.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.buttonAdd.Font = new System.Drawing.Font("Calibri", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.buttonAdd.Location = new System.Drawing.Point(479, 6);
+            this.buttonAdd.Name = "buttonAdd";
+            this.buttonAdd.Size = new System.Drawing.Size(141, 41);
+            this.buttonAdd.TabIndex = 15;
+            this.buttonAdd.Text = "Добавить";
+            this.buttonAdd.UseVisualStyleBackColor = false;
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
+            // 
+            // buttonViewFull
+            // 
+            this.buttonViewFull.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.buttonViewFull.Font = new System.Drawing.Font("Calibri", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.buttonViewFull.Location = new System.Drawing.Point(149, 6);
+            this.buttonViewFull.Name = "buttonViewFull";
+            this.buttonViewFull.Size = new System.Drawing.Size(314, 41);
+            this.buttonViewFull.TabIndex = 14;
+            this.buttonViewFull.Text = "Просмотреть данные о заказе";
+            this.buttonViewFull.UseVisualStyleBackColor = false;
+            this.buttonViewFull.Click += new System.EventHandler(this.buttonViewFull_Click);
+            // 
+            // pictureBoxLogo
+            // 
+            this.pictureBoxLogo.Image = global::PIS_Storage.Properties.Resources.logo;
+            this.pictureBoxLogo.Location = new System.Drawing.Point(12, 10);
+            this.pictureBoxLogo.Name = "pictureBoxLogo";
+            this.pictureBoxLogo.Size = new System.Drawing.Size(108, 44);
+            this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxLogo.TabIndex = 29;
+            this.pictureBoxLogo.TabStop = false;
             // 
             // ManagerOrderList
             // 
@@ -286,9 +299,10 @@
             this.Text = "ManagerOrderList";
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -316,5 +330,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn User;
         private System.Windows.Forms.DataGridViewTextBoxColumn OrderStatusChanges;
         private System.Windows.Forms.Button buttonUpdatedataGridView;
+        private System.Windows.Forms.PictureBox pictureBoxLogo;
     }
 }

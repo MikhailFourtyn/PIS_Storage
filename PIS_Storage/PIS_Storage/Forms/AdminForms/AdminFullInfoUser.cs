@@ -14,6 +14,7 @@ namespace PIS_Storage.Forms.AdminForms
     public partial class AdminFullInfoUser : Form
     {
         int currUserId;
+        // Инициализация параметров формы - размера, возможности растягивать и стартового положения на экране
         private void InitFormParams()
         {
             this.StartPosition = FormStartPosition.CenterParent;

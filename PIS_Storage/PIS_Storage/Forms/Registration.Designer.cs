@@ -32,23 +32,25 @@
             this.buttonReturnBack = new System.Windows.Forms.Button();
             this.buttonRegister = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.labelPasswordCheck = new System.Windows.Forms.Label();
+            this.labelName = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBoxName = new System.Windows.Forms.TextBox();
+            this.labelPasswordLen = new System.Windows.Forms.Label();
+            this.labelLoginLen = new System.Windows.Forms.Label();
             this.textBoxPasswordCheck = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textBoxPassword = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.textBoxLogin = new System.Windows.Forms.TextBox();
-            this.labelPasswordLen = new System.Windows.Forms.Label();
-            this.labelLoginLen = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBoxName = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.labelName = new System.Windows.Forms.Label();
-            this.labelPasswordCheck = new System.Windows.Forms.Label();
+            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // label6
@@ -110,6 +112,65 @@
             this.panel2.Size = new System.Drawing.Size(380, 472);
             this.panel2.TabIndex = 19;
             // 
+            // labelPasswordCheck
+            // 
+            this.labelPasswordCheck.Font = new System.Drawing.Font("Calibri", 10F);
+            this.labelPasswordCheck.ForeColor = System.Drawing.Color.Crimson;
+            this.labelPasswordCheck.Location = new System.Drawing.Point(146, 333);
+            this.labelPasswordCheck.Name = "labelPasswordCheck";
+            this.labelPasswordCheck.Size = new System.Drawing.Size(223, 37);
+            this.labelPasswordCheck.TabIndex = 24;
+            this.labelPasswordCheck.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // labelName
+            // 
+            this.labelName.Font = new System.Drawing.Font("Calibri", 10F);
+            this.labelName.Location = new System.Drawing.Point(146, 67);
+            this.labelName.Name = "labelName";
+            this.labelName.Size = new System.Drawing.Size(223, 37);
+            this.labelName.TabIndex = 23;
+            this.labelName.Text = "Длина 5-80 символов";
+            this.labelName.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label4
+            // 
+            this.label4.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Italic);
+            this.label4.Location = new System.Drawing.Point(81, 18);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(74, 49);
+            this.label4.TabIndex = 21;
+            this.label4.Text = "Имя:";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // textBoxName
+            // 
+            this.textBoxName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.textBoxName.Location = new System.Drawing.Point(161, 28);
+            this.textBoxName.MaxLength = 80;
+            this.textBoxName.Name = "textBoxName";
+            this.textBoxName.Size = new System.Drawing.Size(205, 29);
+            this.textBoxName.TabIndex = 22;
+            // 
+            // labelPasswordLen
+            // 
+            this.labelPasswordLen.AutoSize = true;
+            this.labelPasswordLen.Font = new System.Drawing.Font("Calibri", 10F);
+            this.labelPasswordLen.Location = new System.Drawing.Point(187, 253);
+            this.labelPasswordLen.Name = "labelPasswordLen";
+            this.labelPasswordLen.Size = new System.Drawing.Size(135, 17);
+            this.labelPasswordLen.TabIndex = 20;
+            this.labelPasswordLen.Text = "Длина 5-20 символов";
+            // 
+            // labelLoginLen
+            // 
+            this.labelLoginLen.Font = new System.Drawing.Font("Calibri", 10F);
+            this.labelLoginLen.Location = new System.Drawing.Point(146, 159);
+            this.labelLoginLen.Name = "labelLoginLen";
+            this.labelLoginLen.Size = new System.Drawing.Size(223, 37);
+            this.labelLoginLen.TabIndex = 19;
+            this.labelLoginLen.Text = "Длина 5-20 символов";
+            this.labelLoginLen.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // textBoxPasswordCheck
             // 
             this.textBoxPasswordCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
@@ -140,6 +201,16 @@
             this.textBoxPassword.TabIndex = 9;
             this.textBoxPassword.UseSystemPasswordChar = true;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::PIS_Storage.Properties.Resources.user2;
+            this.pictureBox1.Location = new System.Drawing.Point(11, 18);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(64, 64);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Italic);
@@ -149,6 +220,16 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "Логин:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::PIS_Storage.Properties.Resources.lock1closed;
+            this.pictureBox2.Location = new System.Drawing.Point(11, 195);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(64, 64);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 6;
+            this.pictureBox2.TabStop = false;
             // 
             // label2
             // 
@@ -169,84 +250,15 @@
             this.textBoxLogin.Size = new System.Drawing.Size(205, 29);
             this.textBoxLogin.TabIndex = 8;
             // 
-            // labelPasswordLen
+            // pictureBoxLogo
             // 
-            this.labelPasswordLen.AutoSize = true;
-            this.labelPasswordLen.Font = new System.Drawing.Font("Calibri", 10F);
-            this.labelPasswordLen.Location = new System.Drawing.Point(187, 253);
-            this.labelPasswordLen.Name = "labelPasswordLen";
-            this.labelPasswordLen.Size = new System.Drawing.Size(135, 17);
-            this.labelPasswordLen.TabIndex = 20;
-            this.labelPasswordLen.Text = "Длина 5-20 символов";
-            // 
-            // labelLoginLen
-            // 
-            this.labelLoginLen.Font = new System.Drawing.Font("Calibri", 10F);
-            this.labelLoginLen.Location = new System.Drawing.Point(146, 159);
-            this.labelLoginLen.Name = "labelLoginLen";
-            this.labelLoginLen.Size = new System.Drawing.Size(223, 37);
-            this.labelLoginLen.TabIndex = 19;
-            this.labelLoginLen.Text = "Длина 5-20 символов";
-            this.labelLoginLen.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // label4
-            // 
-            this.label4.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Italic);
-            this.label4.Location = new System.Drawing.Point(81, 18);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(74, 49);
-            this.label4.TabIndex = 21;
-            this.label4.Text = "Имя:";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // textBoxName
-            // 
-            this.textBoxName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.textBoxName.Location = new System.Drawing.Point(161, 28);
-            this.textBoxName.MaxLength = 80;
-            this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(205, 29);
-            this.textBoxName.TabIndex = 22;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::PIS_Storage.Properties.Resources.user2;
-            this.pictureBox1.Location = new System.Drawing.Point(11, 18);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(64, 64);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::PIS_Storage.Properties.Resources.lock1closed;
-            this.pictureBox2.Location = new System.Drawing.Point(11, 195);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(64, 64);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 6;
-            this.pictureBox2.TabStop = false;
-            // 
-            // labelName
-            // 
-            this.labelName.Font = new System.Drawing.Font("Calibri", 10F);
-            this.labelName.Location = new System.Drawing.Point(146, 67);
-            this.labelName.Name = "labelName";
-            this.labelName.Size = new System.Drawing.Size(223, 37);
-            this.labelName.TabIndex = 23;
-            this.labelName.Text = "Длина 5-80 символов";
-            this.labelName.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // labelPasswordCheck
-            // 
-            this.labelPasswordCheck.Font = new System.Drawing.Font("Calibri", 10F);
-            this.labelPasswordCheck.ForeColor = System.Drawing.Color.Crimson;
-            this.labelPasswordCheck.Location = new System.Drawing.Point(146, 333);
-            this.labelPasswordCheck.Name = "labelPasswordCheck";
-            this.labelPasswordCheck.Size = new System.Drawing.Size(223, 37);
-            this.labelPasswordCheck.TabIndex = 24;
-            this.labelPasswordCheck.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.pictureBoxLogo.Image = global::PIS_Storage.Properties.Resources.logo;
+            this.pictureBoxLogo.Location = new System.Drawing.Point(24, 93);
+            this.pictureBoxLogo.Name = "pictureBoxLogo";
+            this.pictureBoxLogo.Size = new System.Drawing.Size(240, 100);
+            this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxLogo.TabIndex = 20;
+            this.pictureBoxLogo.TabStop = false;
             // 
             // Registration
             // 
@@ -254,6 +266,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.pictureBoxLogo);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.buttonReturnBack);
             this.Controls.Add(this.label6);
@@ -265,6 +278,7 @@
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -288,5 +302,6 @@
         private System.Windows.Forms.TextBox textBoxName;
         private System.Windows.Forms.Label labelName;
         private System.Windows.Forms.Label labelPasswordCheck;
+        private System.Windows.Forms.PictureBox pictureBoxLogo;
     }
 }

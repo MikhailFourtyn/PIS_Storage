@@ -14,6 +14,7 @@ namespace PIS_Storage
 {
     public partial class GoodList : Form
     {
+        // Инициализация параметров формы - размера, возможности растягивать и стартового положения на экране
         private void InitFormParams()
         {
             this.StartPosition = FormStartPosition.CenterParent;
@@ -21,6 +22,14 @@ namespace PIS_Storage
             this.Width = 1280;
             this.Height = 720;
             this.MaximizeBox = false;
+        }
+        // Настройка отображения таблицы
+        private void SetupDataGridView()
+        {
+            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dataGridView1.MultiSelect = false;
+            dataGridView1.Dock = DockStyle.Fill;
         }
         public GoodList()
         {
@@ -41,13 +50,6 @@ namespace PIS_Storage
 
                 comboBoxByType.DataSource = db.GoodTypes.ToList();
             }
-        }
-        private void SetupDataGridView()
-        {
-            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            dataGridView1.MultiSelect = false;
-            dataGridView1.Dock = DockStyle.Fill;
         }
 
         private void buttonViewFull_Click(object sender, EventArgs e)

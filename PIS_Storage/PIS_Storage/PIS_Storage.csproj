@@ -362,6 +362,12 @@
   <ItemGroup>
     <None Include="Resources\noImage.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Goods\bosch.jpg" />
+    <Content Include="Resources\Goods\darthDell.jpg" />
+    <Content Include="Resources\Goods\xiaomi_4x.jpg" />
+    <None Include="Resources\logo.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

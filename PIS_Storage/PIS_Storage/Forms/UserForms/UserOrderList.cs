@@ -13,6 +13,7 @@ namespace PIS_Storage.Forms.UserForms
 {
     public partial class UserOrderList : Form
     {
+        // Инициализация параметров формы - размера, возможности растягивать и стартового положения на экране
         private void InitFormParams()
         {
             this.StartPosition = FormStartPosition.CenterParent;
@@ -20,6 +21,14 @@ namespace PIS_Storage.Forms.UserForms
             this.Width = 1280;
             this.Height = 720;
             this.MaximizeBox = false;
+        }
+        // Настройка отображения таблицы
+        private void SetupDataGridView()
+        {
+            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dataGridView1.MultiSelect = false;
+            dataGridView1.Dock = DockStyle.Fill;
         }
         public UserOrderList()
         {
@@ -38,13 +47,6 @@ namespace PIS_Storage.Forms.UserForms
 
                 dataGridView1.DataSource = db.Orders.Local.ToBindingList();
             }
-        }
-        private void SetupDataGridView()
-        {
-            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            dataGridView1.MultiSelect = false;
-            dataGridView1.Dock = DockStyle.Fill;
         }
 
         private void buttonBack_Click(object sender, EventArgs e)

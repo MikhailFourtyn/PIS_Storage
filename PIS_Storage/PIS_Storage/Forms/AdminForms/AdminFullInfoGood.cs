@@ -13,7 +13,9 @@ namespace PIS_Storage.Forms.AdminForms
 {
     public partial class AdminFullInfoGood : Form
     {
+        // Id товара для отображения
         private int currGoodId;
+        // Инициализация параметров формы - размера, возможности растягивать и стартового положения на экране
         private void InitFormParams()
         {
             this.StartPosition = FormStartPosition.CenterParent;
@@ -22,12 +24,23 @@ namespace PIS_Storage.Forms.AdminForms
             this.Height = 720;
             this.MaximizeBox = false;
         }
+        // Настройка элементов для чтения, но не редактирования
+        private void InitElementsForViewing()
+        {
+            textBoxName.ReadOnly = true;
+            textBoxAmount.ReadOnly = true;
+            textBoxPrice.ReadOnly = true;
+
+            // Отключаем для редактирования. Для просмотра типа используем label
+            comboBoxType.Enabled = false;
+        }
         public AdminFullInfoGood(int goodId)
         {
             InitializeComponent();
 
             InitFormParams();
 
+            
             currGoodId = goodId;
 
             using (var db = new PIS_DbContext())
@@ -35,8 +48,10 @@ namespace PIS_Storage.Forms.AdminForms
                 db.Goods.Load();
                 db.GoodTypes.Load();
 
+                // Поиск товара по Id
                 Good goodOnView = db.Goods.SingleOrDefault(v => v.GoodId == goodId);
 
+                // Если найден, то заполнение элементов для отображения
                 if (goodOnView != null)
                 {
                     textBoxName.Text = goodOnView.Name;
@@ -55,19 +70,21 @@ namespace PIS_Storage.Forms.AdminForms
             InitElementsForViewing();
         }
 
+        // Добавление фото через openFileDialog
         private void buttonAddPhoto_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
             openFileDialog1.ShowDialog();
             pictureBoxImage.ImageLocation = openFileDialog1.FileName;
         }
-
+        // Кнопка "Назад"
         private void buttonBack_Click(object sender, EventArgs e)
         {
             // Возвращение на форму просмотра товаров
             Close();
         }
 
+        // Включение режима изменения товара
         private void buttonEditType_Click(object sender, EventArgs e)
         {
             comboBoxType.Enabled = true;
@@ -75,16 +92,8 @@ namespace PIS_Storage.Forms.AdminForms
             textBoxAmount.ReadOnly = false;
             textBoxPrice.ReadOnly = false;
         }
-        private void InitElementsForViewing()
-        {
-            textBoxName.ReadOnly = true;
-            textBoxAmount.ReadOnly = true;
-            textBoxPrice.ReadOnly = true;
 
-            // Отключаем для редактирования. Для просмотра типа используем label
-            comboBoxType.Enabled = false;
-        }
-
+        // "Подтвердить изменения" - внедрение изменений в запись
         private void buttonUpdate_Click(object sender, EventArgs e)
         {
             using (var db = new PIS_DbContext())
@@ -92,6 +101,7 @@ namespace PIS_Storage.Forms.AdminForms
                 db.Goods.Load();
                 db.GoodTypes.Load();
 
+                // Поиск записи о товаре по имеющемуся Id
                 Good goodOnView = db.Goods.SingleOrDefault(v => v.GoodId == currGoodId);
                 if(goodOnView != null)
                 {

@@ -37,7 +37,6 @@
             this.buttonUpdateDataGridView = new System.Windows.Forms.Button();
             this.buttonBack = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.orderBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.orderIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.goodIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.userIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,11 +45,14 @@
             this.orderStatusChangesIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.userDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.orderStatusChangesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.orderBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -75,6 +77,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.pictureBoxLogo);
             this.panel1.Controls.Add(this.buttonBack);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 60);
@@ -144,10 +147,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(1127, 538);
             this.dataGridView1.TabIndex = 28;
             // 
-            // orderBindingSource
-            // 
-            this.orderBindingSource.DataSource = typeof(PIS_Storage.Order);
-            // 
             // orderIdDataGridViewTextBoxColumn
             // 
             this.orderIdDataGridViewTextBoxColumn.DataPropertyName = "OrderId";
@@ -201,6 +200,20 @@
             this.orderStatusChangesDataGridViewTextBoxColumn.HeaderText = "Статус заказа";
             this.orderStatusChangesDataGridViewTextBoxColumn.Name = "orderStatusChangesDataGridViewTextBoxColumn";
             // 
+            // orderBindingSource
+            // 
+            this.orderBindingSource.DataSource = typeof(PIS_Storage.Order);
+            // 
+            // pictureBoxLogo
+            // 
+            this.pictureBoxLogo.Image = global::PIS_Storage.Properties.Resources.logo;
+            this.pictureBoxLogo.Location = new System.Drawing.Point(12, 53);
+            this.pictureBoxLogo.Name = "pictureBoxLogo";
+            this.pictureBoxLogo.Size = new System.Drawing.Size(95, 70);
+            this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxLogo.TabIndex = 15;
+            this.pictureBoxLogo.TabStop = false;
+            // 
             // UserOrderList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -218,6 +231,7 @@
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -241,5 +255,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn orderStatusChangesIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn userDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn orderStatusChangesDataGridViewTextBoxColumn;
+        private System.Windows.Forms.PictureBox pictureBoxLogo;
     }
 }

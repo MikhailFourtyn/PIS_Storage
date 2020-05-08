@@ -40,13 +40,15 @@
             this.buttonBack = new System.Windows.Forms.Button();
             this.pictureBoxImage = new System.Windows.Forms.PictureBox();
             this.buttonAddPhoto = new System.Windows.Forms.Button();
+            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // labelAmount
             // 
             this.labelAmount.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Italic);
-            this.labelAmount.Location = new System.Drawing.Point(12, 274);
+            this.labelAmount.Location = new System.Drawing.Point(21, 357);
             this.labelAmount.Name = "labelAmount";
             this.labelAmount.Size = new System.Drawing.Size(311, 49);
             this.labelAmount.TabIndex = 16;
@@ -56,7 +58,7 @@
             // labelType
             // 
             this.labelType.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Italic);
-            this.labelType.Location = new System.Drawing.Point(12, 146);
+            this.labelType.Location = new System.Drawing.Point(21, 229);
             this.labelType.Name = "labelType";
             this.labelType.Size = new System.Drawing.Size(147, 49);
             this.labelType.TabIndex = 15;
@@ -66,7 +68,7 @@
             // labelPrice
             // 
             this.labelPrice.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Italic);
-            this.labelPrice.Location = new System.Drawing.Point(12, 211);
+            this.labelPrice.Location = new System.Drawing.Point(21, 294);
             this.labelPrice.Name = "labelPrice";
             this.labelPrice.Size = new System.Drawing.Size(158, 49);
             this.labelPrice.TabIndex = 14;
@@ -76,7 +78,7 @@
             // labelName
             // 
             this.labelName.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Italic);
-            this.labelName.Location = new System.Drawing.Point(12, 75);
+            this.labelName.Location = new System.Drawing.Point(21, 158);
             this.labelName.Name = "labelName";
             this.labelName.Size = new System.Drawing.Size(253, 49);
             this.labelName.TabIndex = 13;
@@ -85,7 +87,7 @@
             // 
             // textBoxName
             // 
-            this.textBoxName.Location = new System.Drawing.Point(329, 92);
+            this.textBoxName.Location = new System.Drawing.Point(338, 175);
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(275, 20);
             this.textBoxName.TabIndex = 17;
@@ -100,21 +102,21 @@
             "Клавиатуры",
             "Телефоны",
             "Комьютерные мыши"});
-            this.comboBoxType.Location = new System.Drawing.Point(329, 163);
+            this.comboBoxType.Location = new System.Drawing.Point(338, 246);
             this.comboBoxType.Name = "comboBoxType";
             this.comboBoxType.Size = new System.Drawing.Size(193, 21);
             this.comboBoxType.TabIndex = 18;
             // 
             // textBoxPrice
             // 
-            this.textBoxPrice.Location = new System.Drawing.Point(329, 228);
+            this.textBoxPrice.Location = new System.Drawing.Point(338, 311);
             this.textBoxPrice.Name = "textBoxPrice";
             this.textBoxPrice.Size = new System.Drawing.Size(101, 20);
             this.textBoxPrice.TabIndex = 19;
             // 
             // textBoxAmount
             // 
-            this.textBoxAmount.Location = new System.Drawing.Point(329, 291);
+            this.textBoxAmount.Location = new System.Drawing.Point(338, 374);
             this.textBoxAmount.Name = "textBoxAmount";
             this.textBoxAmount.Size = new System.Drawing.Size(101, 20);
             this.textBoxAmount.TabIndex = 20;
@@ -135,7 +137,7 @@
             // 
             this.buttonBack.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.buttonBack.Font = new System.Drawing.Font("Calibri", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.buttonBack.Location = new System.Drawing.Point(17, 12);
+            this.buttonBack.Location = new System.Drawing.Point(26, 95);
             this.buttonBack.Name = "buttonBack";
             this.buttonBack.Size = new System.Drawing.Size(141, 41);
             this.buttonBack.TabIndex = 25;
@@ -163,11 +165,22 @@
             this.buttonAddPhoto.UseVisualStyleBackColor = false;
             this.buttonAddPhoto.Click += new System.EventHandler(this.buttonAddPhoto_Click);
             // 
+            // pictureBoxLogo
+            // 
+            this.pictureBoxLogo.Image = global::PIS_Storage.Properties.Resources.logo;
+            this.pictureBoxLogo.Location = new System.Drawing.Point(12, 12);
+            this.pictureBoxLogo.Name = "pictureBoxLogo";
+            this.pictureBoxLogo.Size = new System.Drawing.Size(156, 62);
+            this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxLogo.TabIndex = 28;
+            this.pictureBoxLogo.TabStop = false;
+            // 
             // AdminAddGood
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.pictureBoxLogo);
             this.Controls.Add(this.buttonAddPhoto);
             this.Controls.Add(this.pictureBoxImage);
             this.Controls.Add(this.buttonBack);
@@ -183,6 +196,7 @@
             this.Name = "AdminAddGood";
             this.Text = "AdminAddGood";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -202,5 +216,6 @@
         private System.Windows.Forms.Button buttonBack;
         private System.Windows.Forms.PictureBox pictureBoxImage;
         private System.Windows.Forms.Button buttonAddPhoto;
+        private System.Windows.Forms.PictureBox pictureBoxLogo;
     }
 }

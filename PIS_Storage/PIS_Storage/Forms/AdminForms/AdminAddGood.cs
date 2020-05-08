@@ -14,6 +14,7 @@ namespace PIS_Storage.Forms.AdminForms
     public partial class AdminAddGood : Form
     {
         bool addedPhoto = false;
+        // Инициализация параметров формы - размера, возможности растягивать и стартового положения на экране
         private void InitFormParams()
         {
             this.StartPosition = FormStartPosition.CenterParent;
@@ -30,7 +31,7 @@ namespace PIS_Storage.Forms.AdminForms
 
             using(var db = new PIS_DbContext())
             {
-                db.Goods.Load();
+                // Загрузка таблицы GoodTypes и заполнение ею comboBox
                 db.GoodTypes.Load();
 
                 comboBoxType.DataSource = db.GoodTypes.ToList();
@@ -47,7 +48,6 @@ namespace PIS_Storage.Forms.AdminForms
         {
             using (var db = new PIS_DbContext())
             {
-                db.Goods.Load();
                 db.GoodTypes.Load();
 
                 // Формирование нового товара
@@ -73,16 +73,23 @@ namespace PIS_Storage.Forms.AdminForms
             }
         }
 
+        // Добавление фото для товара
         private void buttonAddPhoto_Click(object sender, EventArgs e)
         {
+            // Открытие файла
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
             openFileDialog1.ShowDialog();
+
+            // Для того, чтобы не записать в Good.PhotoPath путь к картинке-заглушке
+            // initImgLocation - путь к уже отображаемой картинке (заглушка) ДО загрузки изображения
             string initImgLocation = pictureBoxImage.ImageLocation;
+
+            // Непосредственно вставка картинки
             pictureBoxImage.ImageLocation = openFileDialog1.FileName;
 
             /*
              * Проверка, что пользователь выбрал файл, а не закрыл диалог. 
-             * Если файл не изменился, то не заносим путь к картинке-заглушке в поле PhotoPath, 
+             * Если файл не изменился, то не заносим (в buttonAdd_Click()) путь к картинке-заглушке в поле PhotoPath, 
              * в котором в таком случае должно быть null.
              */
             if (pictureBoxImage.ImageLocation != initImgLocation)

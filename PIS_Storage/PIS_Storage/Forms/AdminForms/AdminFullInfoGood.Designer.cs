@@ -45,8 +45,10 @@
             this.labelType = new System.Windows.Forms.Label();
             this.buttonEditType = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.goodTypeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonAddPhoto
@@ -166,6 +168,7 @@
             this.pictureBoxImage.Location = new System.Drawing.Point(939, 119);
             this.pictureBoxImage.Name = "pictureBoxImage";
             this.pictureBoxImage.Size = new System.Drawing.Size(300, 300);
+            this.pictureBoxImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxImage.TabIndex = 38;
             this.pictureBoxImage.TabStop = false;
             // 
@@ -203,11 +206,22 @@
             this.label1.Text = "Данные о товаре";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // pictureBoxLogo
+            // 
+            this.pictureBoxLogo.Image = global::PIS_Storage.Properties.Resources.logo;
+            this.pictureBoxLogo.Location = new System.Drawing.Point(12, 2);
+            this.pictureBoxLogo.Name = "pictureBoxLogo";
+            this.pictureBoxLogo.Size = new System.Drawing.Size(105, 58);
+            this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxLogo.TabIndex = 44;
+            this.pictureBoxLogo.TabStop = false;
+            // 
             // AdminFullInfoGood
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.pictureBoxLogo);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonEditType);
             this.Controls.Add(this.labelType);
@@ -227,6 +241,7 @@
             this.Text = "AdminFullInfoGood";
             ((System.ComponentModel.ISupportInitialize)(this.goodTypeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -250,5 +265,6 @@
         private System.Windows.Forms.Button buttonEditType;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.BindingSource goodTypeBindingSource;
+        private System.Windows.Forms.PictureBox pictureBoxLogo;
     }
 }

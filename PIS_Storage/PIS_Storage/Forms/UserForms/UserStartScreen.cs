@@ -13,6 +13,7 @@ namespace PIS_Storage
 {
     public partial class UserStartScreen : Form
     {
+        // Инициализация параметров формы - размера, возможности растягивать и стартового положения на экране
         private void InitFormParams()
         {
             this.StartPosition = FormStartPosition.CenterParent;

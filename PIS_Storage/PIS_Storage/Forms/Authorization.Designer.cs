@@ -39,13 +39,15 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.labelPasswordLen = new System.Windows.Forms.Label();
             this.labelLoginLen = new System.Windows.Forms.Label();
-            this.buttonRegister = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.buttonRegister = new System.Windows.Forms.Button();
+            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -114,7 +116,7 @@
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Italic);
-            this.label3.Location = new System.Drawing.Point(490, 428);
+            this.label3.Location = new System.Drawing.Point(488, 453);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(279, 49);
             this.label3.TabIndex = 10;
@@ -145,7 +147,7 @@
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.textBoxLogin);
-            this.panel2.Location = new System.Drawing.Point(449, 91);
+            this.panel2.Location = new System.Drawing.Point(445, 185);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(369, 265);
             this.panel2.TabIndex = 13;
@@ -170,18 +172,6 @@
             this.labelLoginLen.Text = "Длина 5-20 символов";
             this.labelLoginLen.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // buttonRegister
-            // 
-            this.buttonRegister.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.buttonRegister.Font = new System.Drawing.Font("Calibri", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.buttonRegister.Location = new System.Drawing.Point(515, 516);
-            this.buttonRegister.Name = "buttonRegister";
-            this.buttonRegister.Size = new System.Drawing.Size(228, 56);
-            this.buttonRegister.TabIndex = 15;
-            this.buttonRegister.Text = "Регистрация";
-            this.buttonRegister.UseVisualStyleBackColor = false;
-            this.buttonRegister.Click += new System.EventHandler(this.buttonRegister_Click);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::PIS_Storage.Properties.Resources.user2;
@@ -202,12 +192,35 @@
             this.pictureBox2.TabIndex = 6;
             this.pictureBox2.TabStop = false;
             // 
+            // buttonRegister
+            // 
+            this.buttonRegister.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.buttonRegister.Font = new System.Drawing.Font("Calibri", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.buttonRegister.Location = new System.Drawing.Point(515, 516);
+            this.buttonRegister.Name = "buttonRegister";
+            this.buttonRegister.Size = new System.Drawing.Size(228, 56);
+            this.buttonRegister.TabIndex = 15;
+            this.buttonRegister.Text = "Регистрация";
+            this.buttonRegister.UseVisualStyleBackColor = false;
+            this.buttonRegister.Click += new System.EventHandler(this.buttonRegister_Click);
+            // 
+            // pictureBoxLogo
+            // 
+            this.pictureBoxLogo.Image = global::PIS_Storage.Properties.Resources.logo;
+            this.pictureBoxLogo.Location = new System.Drawing.Point(523, 79);
+            this.pictureBoxLogo.Name = "pictureBoxLogo";
+            this.pictureBoxLogo.Size = new System.Drawing.Size(240, 100);
+            this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxLogo.TabIndex = 16;
+            this.pictureBoxLogo.TabStop = false;
+            // 
             // Authorization
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.pictureBoxLogo);
             this.Controls.Add(this.buttonRegister);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label3);
@@ -221,6 +234,7 @@
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -241,5 +255,6 @@
         private System.Windows.Forms.Button buttonRegister;
         private System.Windows.Forms.Label labelPasswordLen;
         private System.Windows.Forms.Label labelLoginLen;
+        private System.Windows.Forms.PictureBox pictureBoxLogo;
     }
 }

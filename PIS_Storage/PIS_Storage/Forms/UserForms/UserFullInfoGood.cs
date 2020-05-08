@@ -13,6 +13,15 @@ namespace PIS_Storage.Forms.UserForms
 {
     public partial class UserFullInfoGood : Form
     {
+        // Инициализация параметров формы - размера, возможности растягивать и стартового положения на экране
+        private void InitFormParams()
+        {
+            this.StartPosition = FormStartPosition.CenterParent;
+            this.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            this.Width = 1280;
+            this.Height = 720;
+            this.MaximizeBox = false;
+        }
         public UserFullInfoGood(int goodId)
         {
             InitializeComponent();
@@ -21,6 +30,7 @@ namespace PIS_Storage.Forms.UserForms
             {
                 db.Goods.Load();
                 db.GoodTypes.Load();
+                InitFormParams();
 
                 Good view = db.Goods.SingleOrDefault(v => v.GoodId == goodId);
 

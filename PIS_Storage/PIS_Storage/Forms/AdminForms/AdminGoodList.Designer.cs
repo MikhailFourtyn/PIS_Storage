@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.buttonUpdateDataGridView = new System.Windows.Forms.Button();
             this.buttonRemove = new System.Windows.Forms.Button();
             this.buttonAdd = new System.Windows.Forms.Button();
             this.buttonViewFull = new System.Windows.Forms.Button();
@@ -56,13 +57,14 @@
             this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.goodBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.buttonUpdateDataGridView = new System.Windows.Forms.Button();
+            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.goodBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -86,6 +88,18 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1264, 102);
             this.panel3.TabIndex = 18;
+            // 
+            // buttonUpdateDataGridView
+            // 
+            this.buttonUpdateDataGridView.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.buttonUpdateDataGridView.Font = new System.Drawing.Font("Calibri", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.buttonUpdateDataGridView.Location = new System.Drawing.Point(1041, 6);
+            this.buttonUpdateDataGridView.Name = "buttonUpdateDataGridView";
+            this.buttonUpdateDataGridView.Size = new System.Drawing.Size(207, 41);
+            this.buttonUpdateDataGridView.TabIndex = 18;
+            this.buttonUpdateDataGridView.Text = "Обновить";
+            this.buttonUpdateDataGridView.UseVisualStyleBackColor = false;
+            this.buttonUpdateDataGridView.Click += new System.EventHandler(this.buttonUpdateDataGridView_Click);
             // 
             // buttonRemove
             // 
@@ -147,6 +161,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel2.Controls.Add(this.pictureBoxLogo);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
@@ -339,17 +354,15 @@
             // 
             this.goodBindingSource.DataSource = typeof(PIS_Storage.Good);
             // 
-            // buttonUpdateDataGridView
+            // pictureBoxLogo
             // 
-            this.buttonUpdateDataGridView.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.buttonUpdateDataGridView.Font = new System.Drawing.Font("Calibri", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.buttonUpdateDataGridView.Location = new System.Drawing.Point(1041, 6);
-            this.buttonUpdateDataGridView.Name = "buttonUpdateDataGridView";
-            this.buttonUpdateDataGridView.Size = new System.Drawing.Size(207, 41);
-            this.buttonUpdateDataGridView.TabIndex = 18;
-            this.buttonUpdateDataGridView.Text = "Обновить";
-            this.buttonUpdateDataGridView.UseVisualStyleBackColor = false;
-            this.buttonUpdateDataGridView.Click += new System.EventHandler(this.buttonUpdateDataGridView_Click);
+            this.pictureBoxLogo.Image = global::PIS_Storage.Properties.Resources.logo;
+            this.pictureBoxLogo.Location = new System.Drawing.Point(13, 12);
+            this.pictureBoxLogo.Name = "pictureBoxLogo";
+            this.pictureBoxLogo.Size = new System.Drawing.Size(108, 42);
+            this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxLogo.TabIndex = 22;
+            this.pictureBoxLogo.TabStop = false;
             // 
             // AdminGoodList
             // 
@@ -371,6 +384,7 @@
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.goodBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -405,5 +419,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button buttonBack;
         private System.Windows.Forms.Button buttonUpdateDataGridView;
+        private System.Windows.Forms.PictureBox pictureBoxLogo;
     }
 }
