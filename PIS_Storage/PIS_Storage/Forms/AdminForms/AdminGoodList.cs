@@ -107,14 +107,6 @@ namespace PIS_Storage.Forms.AdminForms
             }
         }
 
-        // Отображение полной информации о товаре - открытие формы. Передаем Id выбранного товара
-        private void buttonViewFull_Click_1(object sender, EventArgs e)
-        {
-            int idToShow = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value.ToString());
-            AdminFullInfoGood fullInfo = new AdminFullInfoGood(idToShow);
-            fullInfo.ShowDialog();
-        }
-
         // Применить фильтры
         private void buttonApplyFilters_Click(object sender, EventArgs e)
         {
@@ -241,6 +233,9 @@ namespace PIS_Storage.Forms.AdminForms
                 }
             }
         }
-        
+        private void buttonViewFull_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

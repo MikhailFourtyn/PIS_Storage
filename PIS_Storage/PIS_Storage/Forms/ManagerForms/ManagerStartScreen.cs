@@ -29,12 +29,20 @@ namespace PIS_Storage
             InitFormParams();
         }
 
+        /*
+          Кнопка "" - переход на форму просмотра товаров для администратора 
+          У менеджера и администратора совпадают права по работе с товарами (но не пользователями или заказами)
+          Кроме того, форма AdminGoodList дает возможность перехода только на другие формы работы с товарами 
+                (формы добавления товара и просмотра полной информации о товаре - AdminAddGood и AdminFullInfoGood)
+          Поэтому менеджер может пользоваться формами администратора для работы с товарами
+         */
         private void buttonShowGoodList_Click(object sender, EventArgs e)
         {
             Forms.AdminForms.AdminGoodList goodList = new Forms.AdminForms.AdminGoodList();
             goodList.ShowDialog();
         }
 
+        // Переход на форму просмотра списка заказов
         private void buttonShowOrderList_Click(object sender, EventArgs e)
         {
             ManagerOrderList orderList = new ManagerOrderList();

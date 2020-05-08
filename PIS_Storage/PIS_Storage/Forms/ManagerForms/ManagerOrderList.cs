@@ -39,7 +39,8 @@ namespace PIS_Storage.Forms.ManagerForms
 
             SetupDataGridView();
 
-            using(var db = new PIS_DbContext())
+            // Заполнение таблицы
+            using (var db = new PIS_DbContext())
             {
                 db.Orders.Load();
                 db.OrderStatusChanges.Load();
@@ -49,6 +50,8 @@ namespace PIS_Storage.Forms.ManagerForms
                 dataGridView1.DataSource = db.Orders.Local.ToBindingList();
             }
         }
+
+        // Кнопка "Назад" - закрытие формы
         private void buttonBack_Click(object sender, EventArgs e)
         {
             Close();
@@ -66,9 +69,15 @@ namespace PIS_Storage.Forms.ManagerForms
                     db.Goods.Load();
                     db.Users.Load();
 
+                    // Получаем id заказа
                     int orderId = Convert.ToInt32(dataGridView1.CurrentRow.Cells[1].Value.ToString());
+
+                    // Находим соответствующую запись в таблице Orders
                     Order orderOnUpdate = db.Orders.SingleOrDefault(v => v.OrderId == orderId);
+
+                    // Находим нужную запись таблицы OrderStatusChanges
                     OrderStatusChange stat = db.OrderStatusChanges.SingleOrDefault(v => v.OrderId == orderOnUpdate.OrderId);
+                    // Изменяем статус на следующий, не выходя за предел - значения от 0 до 3
                     if (stat.OrderStatus < 3)
                     {
                         db.SaveChanges();
@@ -76,6 +85,24 @@ namespace PIS_Storage.Forms.ManagerForms
                     }
 
                 }
+            }
+        }
+        // Кнопка "Обновить" - перезагрузка dataGridView
+        private void buttonUpdatedataGridView_Click(object sender, EventArgs e)
+        {
+            using (var db = new PIS_DbContext())
+            {
+                db.Orders.Load();
+                db.Goods.Load();
+                db.Users.Load();
+                db.OrderStatusChanges.Load();
+
+                // Очищаем таблицу
+                dataGridView1.SelectAll();
+                dataGridView1.ClearSelection();
+
+                // Заполняем таблицу
+                dataGridView1.DataSource = db.Orders.Local.ToBindingList();
             }
         }
 
@@ -94,20 +121,5 @@ namespace PIS_Storage.Forms.ManagerForms
 
         }
 
-        private void buttonUpdatedataGridView_Click(object sender, EventArgs e)
-        {
-            using (var db = new PIS_DbContext())
-            {
-                db.Orders.Load();
-                db.Goods.Load();
-                db.Users.Load();
-                db.OrderStatusChanges.Load();
-
-                dataGridView1.SelectAll();
-                dataGridView1.ClearSelection();
-
-                dataGridView1.DataSource = db.Orders.Local.ToBindingList();
-            }
-        }
     }
 }

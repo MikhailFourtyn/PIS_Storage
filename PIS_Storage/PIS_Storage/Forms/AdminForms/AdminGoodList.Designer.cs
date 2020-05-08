@@ -38,6 +38,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.buttonBack = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -57,14 +58,13 @@
             this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.goodBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.goodBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -135,7 +135,7 @@
             this.buttonViewFull.TabIndex = 14;
             this.buttonViewFull.Text = "Просмотреть данные о товаре";
             this.buttonViewFull.UseVisualStyleBackColor = false;
-            this.buttonViewFull.Click += new System.EventHandler(this.buttonViewFull_Click_1);
+            this.buttonViewFull.Click += new System.EventHandler(this.buttonViewFull_Click);
             // 
             // panel1
             // 
@@ -168,6 +168,16 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1264, 60);
             this.panel2.TabIndex = 16;
+            // 
+            // pictureBoxLogo
+            // 
+            this.pictureBoxLogo.Image = global::PIS_Storage.Properties.Resources.logo;
+            this.pictureBoxLogo.Location = new System.Drawing.Point(13, 12);
+            this.pictureBoxLogo.Name = "pictureBoxLogo";
+            this.pictureBoxLogo.Size = new System.Drawing.Size(108, 42);
+            this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxLogo.TabIndex = 22;
+            this.pictureBoxLogo.TabStop = false;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -354,16 +364,6 @@
             // 
             this.goodBindingSource.DataSource = typeof(PIS_Storage.Good);
             // 
-            // pictureBoxLogo
-            // 
-            this.pictureBoxLogo.Image = global::PIS_Storage.Properties.Resources.logo;
-            this.pictureBoxLogo.Location = new System.Drawing.Point(13, 12);
-            this.pictureBoxLogo.Name = "pictureBoxLogo";
-            this.pictureBoxLogo.Size = new System.Drawing.Size(108, 42);
-            this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxLogo.TabIndex = 22;
-            this.pictureBoxLogo.TabStop = false;
-            // 
             // AdminGoodList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -380,11 +380,11 @@
             this.panel3.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.goodBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.ResumeLayout(false);
 
         }
