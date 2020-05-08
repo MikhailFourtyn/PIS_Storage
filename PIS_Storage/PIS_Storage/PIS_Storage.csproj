@@ -131,6 +131,12 @@
     <Compile Include="Forms\UserForms\UserFullInfoGood.Designer.cs">
       <DependentUpon>UserFullInfoGood.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\UserForms\UserOrderList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UserForms\UserOrderList.Designer.cs">
+      <DependentUpon>UserOrderList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\202005042045411_InitialCreate.cs" />
     <Compile Include="Migrations\202005042045411_InitialCreate.designer.cs">
       <DependentUpon>202005042045411_InitialCreate.cs</DependentUpon>
@@ -186,6 +192,10 @@
     <Compile Include="Migrations\202005072335437_AddedConnectionOrderToOrderStatusCh.cs" />
     <Compile Include="Migrations\202005072335437_AddedConnectionOrderToOrderStatusCh.designer.cs">
       <DependentUpon>202005072335437_AddedConnectionOrderToOrderStatusCh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005080201238_ChangedGoodPriceIntoInt.cs" />
+    <Compile Include="Migrations\202005080201238_ChangedGoodPriceIntoInt.designer.cs">
+      <DependentUpon>202005080201238_ChangedGoodPriceIntoInt.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="DB Entities\Order.cs" />
@@ -249,6 +259,9 @@
     <EmbeddedResource Include="Forms\UserForms\UserFullInfoGood.resx">
       <DependentUpon>UserFullInfoGood.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserForms\UserOrderList.resx">
+      <DependentUpon>UserOrderList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202005042045411_InitialCreate.resx">
       <DependentUpon>202005042045411_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
@@ -290,6 +303,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202005072335437_AddedConnectionOrderToOrderStatusCh.resx">
       <DependentUpon>202005072335437_AddedConnectionOrderToOrderStatusCh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005080201238_ChangedGoodPriceIntoInt.resx">
+      <DependentUpon>202005080201238_ChangedGoodPriceIntoInt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

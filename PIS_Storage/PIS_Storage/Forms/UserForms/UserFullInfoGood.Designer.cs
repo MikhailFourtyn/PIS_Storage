@@ -43,7 +43,7 @@
             this.labelName.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Italic);
             this.labelName.Location = new System.Drawing.Point(16, 143);
             this.labelName.Name = "labelName";
-            this.labelName.Size = new System.Drawing.Size(474, 49);
+            this.labelName.Size = new System.Drawing.Size(644, 49);
             this.labelName.TabIndex = 7;
             this.labelName.Text = "Наименование товара:";
             this.labelName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -54,7 +54,7 @@
             this.labelPrice.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Italic);
             this.labelPrice.Location = new System.Drawing.Point(16, 279);
             this.labelPrice.Name = "labelPrice";
-            this.labelPrice.Size = new System.Drawing.Size(236, 49);
+            this.labelPrice.Size = new System.Drawing.Size(320, 49);
             this.labelPrice.TabIndex = 9;
             this.labelPrice.Text = "Цена товара: ";
             this.labelPrice.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -65,7 +65,7 @@
             this.labelType.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Italic);
             this.labelType.Location = new System.Drawing.Point(16, 214);
             this.labelType.Name = "labelType";
-            this.labelType.Size = new System.Drawing.Size(474, 49);
+            this.labelType.Size = new System.Drawing.Size(524, 49);
             this.labelType.TabIndex = 11;
             this.labelType.Text = "Тип товара:";
             this.labelType.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;

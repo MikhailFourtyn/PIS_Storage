@@ -19,7 +19,7 @@ namespace PIS_Storage
         public string Name { get; set; }
 
         [Required]
-        public short Price { get; set; }
+        public int Price { get; set; }
 
         [MaxLength(400)]
         public string PhotoPath { get; set; }

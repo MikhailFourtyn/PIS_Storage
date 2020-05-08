@@ -81,8 +81,10 @@ namespace PIS_Storage.Forms.UserForms
                                 OrderStatusChangesId = 0
                             };
 
-                            // Изменение записи о товаром в таблице
-                            orderedGood.Amount -= Convert.ToInt16(amountToOrder);
+                            // Изменение записи о товаре в таблице
+                            db.Goods.SingleOrDefault(x => x.GoodId == orderedGood.GoodId).Amount -= Convert.ToInt16(amountToOrder);
+                            //db.Orders.Find(orderedGood.GoodId).Amount -= Convert.ToInt16(amountToOrder);
+                            //orderedGood.Amount -= Convert.ToInt16(amountToOrder);
 
                             db.Orders.Add(order);
                             db.SaveChanges();

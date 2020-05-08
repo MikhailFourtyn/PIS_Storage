@@ -67,7 +67,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(1264, 60);
             this.label1.TabIndex = 5;
-            this.label1.Text = "Каталог пользователей ПИС \"Склад\"";
+            this.label1.Text = "Перечень пользователей ПИС \"Склад\"";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel3

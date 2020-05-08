@@ -53,7 +53,7 @@
             // 
             this.buttonAddPhoto.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.buttonAddPhoto.Font = new System.Drawing.Font("Calibri", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.buttonAddPhoto.Location = new System.Drawing.Point(1020, 447);
+            this.buttonAddPhoto.Location = new System.Drawing.Point(1007, 445);
             this.buttonAddPhoto.Name = "buttonAddPhoto";
             this.buttonAddPhoto.Size = new System.Drawing.Size(174, 41);
             this.buttonAddPhoto.TabIndex = 39;
@@ -77,11 +77,11 @@
             // 
             this.buttonUpdate.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.buttonUpdate.Font = new System.Drawing.Font("Calibri", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.buttonUpdate.Location = new System.Drawing.Point(565, 608);
+            this.buttonUpdate.Location = new System.Drawing.Point(456, 590);
             this.buttonUpdate.Name = "buttonUpdate";
-            this.buttonUpdate.Size = new System.Drawing.Size(141, 41);
+            this.buttonUpdate.Size = new System.Drawing.Size(370, 41);
             this.buttonUpdate.TabIndex = 36;
-            this.buttonUpdate.Text = "Изменить";
+            this.buttonUpdate.Text = "Подтвердить изменения";
             this.buttonUpdate.UseVisualStyleBackColor = false;
             this.buttonUpdate.Click += new System.EventHandler(this.buttonUpdate_Click);
             // 
@@ -104,10 +104,11 @@
             this.comboBoxType.DataSource = this.goodTypeBindingSource;
             this.comboBoxType.DisplayMember = "Name";
             this.comboBoxType.FormattingEnabled = true;
-            this.comboBoxType.Location = new System.Drawing.Point(342, 296);
+            this.comboBoxType.Location = new System.Drawing.Point(342, 284);
             this.comboBoxType.Name = "comboBoxType";
             this.comboBoxType.Size = new System.Drawing.Size(193, 21);
             this.comboBoxType.TabIndex = 33;
+            this.comboBoxType.SelectedIndexChanged += new System.EventHandler(this.comboBoxType_SelectedIndexChanged);
             // 
             // goodTypeBindingSource
             // 
@@ -173,7 +174,7 @@
             this.labelType.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Italic);
             this.labelType.Location = new System.Drawing.Point(337, 217);
             this.labelType.Name = "labelType";
-            this.labelType.Size = new System.Drawing.Size(147, 49);
+            this.labelType.Size = new System.Drawing.Size(385, 49);
             this.labelType.TabIndex = 41;
             this.labelType.Text = "[Тип товара]";
             this.labelType.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -181,12 +182,12 @@
             // buttonEditType
             // 
             this.buttonEditType.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.buttonEditType.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Italic);
-            this.buttonEditType.Location = new System.Drawing.Point(30, 280);
+            this.buttonEditType.Font = new System.Drawing.Font("Calibri", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.buttonEditType.Location = new System.Drawing.Point(456, 487);
             this.buttonEditType.Name = "buttonEditType";
-            this.buttonEditType.Size = new System.Drawing.Size(156, 49);
+            this.buttonEditType.Size = new System.Drawing.Size(370, 72);
             this.buttonEditType.TabIndex = 42;
-            this.buttonEditType.Text = "Изменить тип товара";
+            this.buttonEditType.Text = "Включить режим изменения данных о товаре";
             this.buttonEditType.UseVisualStyleBackColor = false;
             this.buttonEditType.Click += new System.EventHandler(this.buttonEditType_Click);
             // 

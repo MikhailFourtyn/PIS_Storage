@@ -99,6 +99,7 @@ namespace PIS_Storage.Forms.AdminForms
                     goodOnView.GoodTypeId = ((GoodType)comboBoxType.SelectedItem).GoodTypeId;
                     goodOnView.Name = textBoxName.Text;
                     goodOnView.PhotoPath = pictureBoxImage.ImageLocation;
+                    goodOnView.Price = Convert.ToInt32(textBoxPrice.Text);
 
                     db.SaveChanges();
                 }
@@ -108,6 +109,11 @@ namespace PIS_Storage.Forms.AdminForms
         private void button1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void comboBoxType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

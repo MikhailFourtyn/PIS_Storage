@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PIS_Storage.Forms.UserForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -37,7 +38,8 @@ namespace PIS_Storage
 
         private void buttonViewOrders_Click(object sender, EventArgs e)
         {
-
+            UserOrderList orderList = new UserOrderList();
+            orderList.ShowDialog();
         }
     }
 }

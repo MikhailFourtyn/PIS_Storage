@@ -110,8 +110,13 @@ namespace PIS_Storage
             // True - показываем товары, которые есть в наличии
             // False - показываем товары, которых нет в наличии
             bool showAvailable = false;
-            if (comboBoxByAvailable.SelectedItem.ToString() == "В наличии")
-                showAvailable = true;
+            if (checkBoxByAvailable.Checked)
+            {
+                if (comboBoxByAvailable.SelectedItem.ToString() == "В наличии")
+                    showAvailable = true;
+                if (comboBoxByAvailable.SelectedItem.ToString() == "Не в наличии")
+                    showAvailable = false;
+            }
 
             using (var db = new PIS_DbContext())
             {

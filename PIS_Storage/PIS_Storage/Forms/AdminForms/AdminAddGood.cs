@@ -56,7 +56,7 @@ namespace PIS_Storage.Forms.AdminForms
                     Name = textBoxName.Text,
                     Amount = Convert.ToInt16(textBoxAmount.Text),
                     GoodTypeId = ((GoodType)comboBoxType.SelectedItem).GoodTypeId,
-                    Price = Convert.ToInt16(textBoxPrice.Text)
+                    Price = Convert.ToInt32(textBoxPrice.Text)
                 };
                 if (addedPhoto)
                     goodToAdd.PhotoPath = pictureBoxImage.ImageLocation;
