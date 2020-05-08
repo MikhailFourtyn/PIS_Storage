@@ -12,6 +12,7 @@ namespace PIS_Storage
 {
     public partial class StartScreen : Form
     {
+        // Инициализация параметров формы - размера, возможности растягивать и стартового положения на экране
         private void InitFormParams()
         {
             this.StartPosition = FormStartPosition.CenterScreen;
@@ -27,11 +28,10 @@ namespace PIS_Storage
 
             InitFormParams();
 
-            OpenFileDialog ofd = new OpenFileDialog();
-
             pictureBox1.Image = Properties.Resources.storage;
         }
 
+        // Кнопка "Перейти к окну авторизации"
         private void buttonLogin_Click(object sender, EventArgs e)
         {
             Hide();

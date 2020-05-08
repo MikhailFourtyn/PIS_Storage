@@ -11,6 +11,7 @@ using System.Windows.Forms;
 
 namespace PIS_Storage.Forms.UserForms
 {
+    // Форма пользователя - оформить заказ
     public partial class ArrangeOrder : Form
     {
         private int _orderedGoodId;

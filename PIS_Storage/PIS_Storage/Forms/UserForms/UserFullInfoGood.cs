@@ -32,8 +32,10 @@ namespace PIS_Storage.Forms.UserForms
                 db.GoodTypes.Load();
                 InitFormParams();
 
+                // Находим запись о выбранном для просмотра товаре
                 Good view = db.Goods.SingleOrDefault(v => v.GoodId == goodId);
 
+                // Выводим информацию
                 if(view != null)
                 {
                     labelName.Text = "Наименование товара: " + view.Name;
@@ -56,6 +58,11 @@ namespace PIS_Storage.Forms.UserForms
 
                 }
             }
+        }
+        // кнопка "Назад" - закрыть форму
+        private void buttonBack_Click(object sender, EventArgs e)
+        {
+            Close();
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -81,11 +88,6 @@ namespace PIS_Storage.Forms.UserForms
         private void labelName_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void buttonBack_Click(object sender, EventArgs e)
-        {
-            Close();
         }
     }
 }

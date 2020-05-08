@@ -13,6 +13,7 @@ namespace PIS_Storage
 {
     public partial class Authorization : Form
     {
+        // Инициализация параметров формы - размера, возможности растягивать и стартового положения на экране
         private void InitFormParams()
         {
             this.StartPosition = FormStartPosition.CenterParent;
@@ -28,6 +29,7 @@ namespace PIS_Storage
             InitFormParams();
         }
 
+        // Кнопка "Зарегистрироваться" - переход на форму регистрации
         private void buttonRegister_Click(object sender, EventArgs e)
         {
             Hide();
@@ -36,6 +38,7 @@ namespace PIS_Storage
             Close();
         }
 
+        // Проверка textbox логина и пароля на требования к длине и вывод сообщения об ошибке
         bool checkTextboxes(ref string userLogin, ref string userPassword)
         {
             bool res = true;
@@ -67,6 +70,7 @@ namespace PIS_Storage
             return res;
         }
 
+        // Кнопка "Войти" - проверка введенных данных и переход на форму стартового экрана
         private void buttonLogin_Click_1(object sender, EventArgs e)
         {
             string userLogin = textBoxLogin.Text;

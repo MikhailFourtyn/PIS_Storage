@@ -12,6 +12,7 @@ namespace PIS_Storage
 {
     public partial class Registration : Form
     {
+        // Инициализация параметров формы - размера, возможности растягивать и стартового положения на экране
         private void InitFormParams()
         {
             this.StartPosition = FormStartPosition.CenterParent;
@@ -27,6 +28,7 @@ namespace PIS_Storage
             InitFormParams();
         }
 
+        // Кнопка "Назад" - возврат на форму авторизации
         private void buttonReturnBack_Click(object sender, EventArgs e)
         {
             Hide();
@@ -35,6 +37,10 @@ namespace PIS_Storage
             Close();
         }
 
+        /*
+         Кнопка "Зарегистрироваться" - проверка введенных данных на требования для ввода, 
+         создание записи о пользователе и переход на стартовый экран пользователя
+         */
         private void buttonRegister_Click(object sender, EventArgs e)
         {
             using (var db = new PIS_DbContext())
@@ -49,6 +55,7 @@ namespace PIS_Storage
 
                 if(loginTextboxesValid)
                 {
+                    // Проверка на занятость логина - Поиск записи о пользователе с таким логином 
                     User reg = db.Users.SingleOrDefault(u => u.Login == inputLogin);
 
                     if (reg != null)
@@ -83,6 +90,7 @@ namespace PIS_Storage
             }
         }
 
+        // Проверка textbox логина и пароля на требования к длине и вывод сообщения об ошибке
         bool checkTextboxes(ref string name, ref string login, ref string password, ref string passCheck)
         {
             bool res = true;
